@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Admin\ForgetPassword;
+use App\Http\Livewire\Admin\Login;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Login::class)->name('login');
+Route::get('/forgot-password', ForgetPassword::class)->name('password.reset');
