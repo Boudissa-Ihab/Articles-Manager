@@ -1,0 +1,41 @@
+
+.form-error-message{
+	font-size: 16px;
+	line-height: 20px;
+	color:#E1574C;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+input.error-input, select.error-input,textarea.error-input, a.error-input {
+	outline: 1px solid #E1574C;
+}
+
+.card-box {
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+.thumb-lg {
+    height: 120px;
+    width: 120px;
+}
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+.text-pink {
+    color: #ff679b!important;
+}
+.btn-rounded {
+    border-radius: 2em;
+}
+.text-muted {
+    color: #98a6ad!important;
+}
