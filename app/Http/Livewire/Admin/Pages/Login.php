@@ -11,36 +11,18 @@ class Login extends Component
     public $password;
     public $remember;
 
-    protected $rules = [
-        'email' => 'required|email',
-        'password' => 'required',
-        'remember' => 'nullable|boolean'
-    ];
-
-    protected $messages = [
-        'email.required' => "L'adresse mail ne peut pas être vide",
-        'email.email' => "Veuillez entrer une adresse mail valide",
-        'password.required' => "Le mot de passe ne peut pas être vide"
-    ];
-
-    public function updated($property)
-    {
-        // Add real-time validation
-        $this->validateOnly($property);
-    }
-
     public function login()
     {
-        $validatedData = $this->validate();
         $credentials = [
-            'email' => $validatedData['email'],
-            'password' => $validatedData['password']
+            'email' => $this->email,
+            'password' => $this->password
         ];
 
-        if (Auth::attempt($credentials, $validatedData['remember']))
+        if (Auth::guard('admin')->attempt($credentials, $this->remember))
             return redirect()->route('dashboard');
 
-        session()->flash("error", "Adresse mail / mot de passe erroné(s)");
+        else
+            session()->flash("error", "Adresse mail et/ou mot de passe erroné(s)");
     }
 
     public function render()
