@@ -35,14 +35,6 @@ class Authors extends Component
     {
         try {
             $author = Author::find($this->author);
-
-
-            // Detach all documents from current author
-
-            /* $author->documents()->detach(); */
-
-
-
             $author->delete();
             alert()->success("Auteur supprimé avec succès");
         } catch (Throwable $e) {
