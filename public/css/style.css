@@ -81,3 +81,50 @@ input::-webkit-file-upload-button {
     height: 42px;
     width: 100%;
 }
+
+.img-preview {
+    max-height: 400px;
+    width: auto;
+}
+
+.center-img {
+    display: flex;
+    justify-content: center;
+}
+
+/* Add elements in "add document" page */
+.list-unstyled{
+	padding-left: 0;
+    list-style: none;
+}
+
+.attributed-stats-list{
+	white-space: nowrap;
+	flex-wrap: wrap;
+}
+
+.attributed-stats-list .stat-item{
+	padding: 6px 5px 6px 15px;
+	margin-right: 15px;
+	background-color: #ebebeb;
+	border-radius: 4px;
+	text-transform: capitalize;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 500;
+	color: var(--secondary-text);
+	margin-bottom: 10px;
+}
+
+.attributed-stats-list .stat-item button{
+	border-radius: 50%;
+	border: 0px;
+	color: var(--secondary-text);
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.attributed-stats-list .stat-item button:hover{
+	color: var(--secondary-color);
+}
+/********************************************/

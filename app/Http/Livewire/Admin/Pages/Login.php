@@ -19,7 +19,7 @@ class Login extends Component
         ];
 
         if (Auth::guard('admin')->attempt($credentials, $this->remember))
-            return redirect()->route('dashboard');
+            return redirect()->route('admin.dashboard');
 
         else
             session()->flash("error", "Adresse mail et/ou mot de passe erroné(s)");
