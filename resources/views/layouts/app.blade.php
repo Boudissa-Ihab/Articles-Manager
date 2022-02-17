@@ -11,7 +11,7 @@
         Github : https://github.com/Boudissa-Ihab
         Linkedin : https://www.linkedin.com/in/ihab-boudissa-727346176/">
     <title>Journal PECAN</title>
-    <!-- Favicon -->
+    <!-- Logo -->
     <link rel="icon" href="{{ asset('img/brand/logo.png') }}" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
@@ -24,7 +24,10 @@
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" type="text/css">
     <!-- Alpine JS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- CKeditor JS -->
     <script src="//cdn.ckeditor.com/4.16.0/full/ckeditor.js"></script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     @livewireStyles
 </head>
 
@@ -84,6 +87,12 @@
                         <a class="nav-link {{ Request::is('admin/admins/*') || Request::is('admin/admins') ? 'active' : '' }}" href="{{ route('admin.admins') }}">
                             <i class="fas fa-user-shield text-primary"></i>
                             <span class="nav-link-text">Administrateurs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('admin/slider/*') || Request::is('admin/slider') ? 'active' : '' }}" href="{{ route('admin.slider') }}">
+                            <i class="fas fa-image text-primary"></i>
+                            <span class="nav-link-text">Slider</span>
                         </a>
                     </li>
                 </ul>
@@ -211,6 +220,7 @@
     <!-- Argon JS -->
     <script src="{{ asset('js/argon.js?v=1.2.0') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
 
 </html>

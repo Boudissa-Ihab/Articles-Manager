@@ -11,8 +11,8 @@
         Github : https://github.com/Boudissa-Ihab
         Linkedin : https://www.linkedin.com/in/ihab-boudissa-727346176/">
     <title>Journal PECAN</title>
-    <!-- Favicon -->
-    <link rel="icon" href="{{ asset('img/brand/favicon.png') }}" type="image/png">
+    <!-- Logo -->
+    <link rel="icon" href="{{ asset('img/brand/logo.png') }}" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->

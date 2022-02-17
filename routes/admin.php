@@ -1,23 +1,24 @@
 <?php
 
-use App\Http\Livewire\Admin\Pages\AboutUs;
-use App\Http\Livewire\Admin\Pages\AddAdmin;
-use App\Http\Livewire\Admin\Pages\AddAuthor;
-use App\Http\Livewire\Admin\Pages\AddDocument;
-use App\Http\Livewire\Admin\Pages\Admins;
-use App\Http\Livewire\Admin\Pages\Authors;
-use App\Http\Livewire\Admin\Pages\ClientDetails;
-use App\Http\Livewire\Admin\Pages\Clients;
-use App\Http\Livewire\Admin\Pages\ContactUs;
-use App\Http\Livewire\Admin\Pages\Dashboard;
-use App\Http\Livewire\Admin\Pages\Documents;
-use App\Http\Livewire\Admin\Pages\Domains;
-use App\Http\Livewire\Admin\Pages\EditAuthor;
-use App\Http\Livewire\Admin\Pages\EditDocument;
-use App\Http\Livewire\Admin\Pages\Login;
-use App\Http\Livewire\Admin\Pages\Orders;
-use App\Http\Livewire\Admin\Pages\Profile;
-use App\Http\Livewire\Admin\Pages\TermsConditions;
+use App\Http\Livewire\Admin\AboutUs;
+use App\Http\Livewire\Admin\AddAdmin;
+use App\Http\Livewire\Admin\AddAuthor;
+use App\Http\Livewire\Admin\AddDocument;
+use App\Http\Livewire\Admin\Admins;
+use App\Http\Livewire\Admin\Authors;
+use App\Http\Livewire\Admin\ClientDetails;
+use App\Http\Livewire\Admin\Clients;
+use App\Http\Livewire\Admin\ContactUs;
+use App\Http\Livewire\Admin\Dashboard;
+use App\Http\Livewire\Admin\Documents;
+use App\Http\Livewire\Admin\Domains;
+use App\Http\Livewire\Admin\EditAuthor;
+use App\Http\Livewire\Admin\EditDocument;
+use App\Http\Livewire\Admin\Login;
+use App\Http\Livewire\Admin\Orders;
+use App\Http\Livewire\Admin\Profile;
+use App\Http\Livewire\Admin\Slider;
+use App\Http\Livewire\Admin\TermsConditions;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -57,6 +58,7 @@ Route::middleware(['auth:admin'])->name('admin.')->group(function () {
     Route::get('/admins', Admins::class)->name('admins');
     Route::get('/admins/create', AddAdmin::class)->name('admins.create');
 
+    Route::get('/slider', Slider::class)->name('slider');
     Route::get('/contacts', ContactUs::class)->name('contacts');
 
     Route::get('logout',function(){
