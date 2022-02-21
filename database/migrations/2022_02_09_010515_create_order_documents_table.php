@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAuthorHasDocumentsTable extends Migration
+class CreateOrderDocumentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateAuthorHasDocumentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('author_has_documents', function (Blueprint $table) {
+        Schema::create('order_documents', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('author_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->decimal('price', 6, 2)->default(0);
             $table->foreignId('document_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('order_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +29,6 @@ class CreateAuthorHasDocumentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('author_has_documents');
+        Schema::dropIfExists('order_documents');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDomainHasDocumentsTable extends Migration
+class CreateDomainDocumentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDomainHasDocumentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('domain_has_documents', function (Blueprint $table) {
+        Schema::create('domain_documents', function (Blueprint $table) {
             $table->id();
             $table->foreignId('domain_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('document_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
@@ -27,6 +27,6 @@ class CreateDomainHasDocumentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('domain_has_documents');
+        Schema::dropIfExists('domain_documents');
     }
 }
