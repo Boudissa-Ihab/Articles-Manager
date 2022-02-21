@@ -19,4 +19,9 @@ class Country extends Model
         'code',
         'phone_code'
     ];
+
+    public function user()
+    {
+        return $this->hasMany(User::class);
+    }
 }

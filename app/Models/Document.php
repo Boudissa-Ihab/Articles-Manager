@@ -30,16 +30,26 @@ class Document extends Model
 
     public function domains()
     {
-        return $this->belongsToMany(Domain::class, "domain_has_documents");
+        return $this->belongsToMany(Domain::class, "domain_documents");
     }
 
     public function authors()
     {
-        return $this->belongsToMany(Author::class, "author_has_documents");
+        return $this->belongsToMany(Author::class, "author_documents");
     }
 
-    public function medias()
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class, "order_documents");
+    }
+
+    /* public function slider()
+    {
+        return $this->belongsTo(Slider::class);
+    } */
+
+    /* public function medias()
     {
         return $this->morphMany(Media::class, 'media');
-    }
+    } */
 }
