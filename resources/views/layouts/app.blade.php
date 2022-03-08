@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Fournir aux chercheurs et étudiants un accès aux articles scientifiques">
-    <meta name="keywords" content="Articles Scientifiques, Téléchargement, Actualité">
-    <meta name="owner" content="">
+    <meta name="keywords" content="Articles Scientifiques, Téléchargement, Documents, Chercheurs Actualité">
     <meta name="author" content="Boudissa Ihab
         Github : https://github.com/Boudissa-Ihab
         Linkedin : https://www.linkedin.com/in/ihab-boudissa-727346176/">
@@ -179,7 +178,7 @@
                                 <i class="fas fa-file-signature"></i>
                                 <span>Termes et conditions</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="{{ route('admin.settings') }}" class="dropdown-item">
                                 <i class="ni ni-settings-gear-65"></i>
                                 <span>Paramètres</span>
                             </a>

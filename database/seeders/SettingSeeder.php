@@ -26,6 +26,30 @@ class SettingSeeder extends Seeder
             [
                 'key' => 'logo',
                 'value' => '',
+            ],
+            [
+                'key' => 'app_name',
+                'value' => 'Journal PECAN',
+            ],
+            [
+                'key' => 'email',
+                'value' => '',
+            ],
+            [
+                'key' => 'facebook_link',
+                'value' => '',
+            ],
+            [
+                'key' => 'instagram_link',
+                'value' => '',
+            ],
+            [
+                'key' => 'twitter_link',
+                'value' => '',
+            ],
+            [
+                'key' => 'linkedin_link',
+                'value' => '',
             ]
         ]);
     }

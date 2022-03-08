@@ -7,12 +7,12 @@ use Throwable;
 
 class TermsConditions extends Component
 {
-    public $termsPolicies;
+    public $termsConditions;
 
     public function save()
     {
         try {
-            setting(['terms_and_policies' => $this->termsPolicies]);
+            setting(['terms_and_conditions' => $this->termsConditions]);
             setting()->save();
             alert()->success("Contenu enregistré avec succès");
             return redirect()->route('admin.dashboard');
