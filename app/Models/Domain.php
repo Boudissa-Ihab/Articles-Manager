@@ -22,6 +22,6 @@ class Domain extends Model
 
     public function documents()
     {
-        return $this->belongsToMany(Document::class)->using(DomainDocuments::class);
+        return $this->belongsToMany(Document::class, "domain_documents");
     }
 }
