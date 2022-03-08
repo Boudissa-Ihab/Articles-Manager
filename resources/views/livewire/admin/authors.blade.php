@@ -111,7 +111,7 @@
                 </div>
                 <div class="modal-body text-center">
                     <span class="text-danger" style="display: block;" role="alert">
-                        Voulez vous vraiment supprimer l'auteur "{{ $author->name ?? "" }}" ? Cette action est irréversible.
+                        Voulez vous vraiment supprimer l'auteur "{{ $this->author->name ?? "" }}" ? Cette action est irréversible.
                     </span>
                 </div>
                 <div class="modal-footer">

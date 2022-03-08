@@ -12,6 +12,7 @@ class Documents extends Component
     use WithPagination;
 
     public $document;
+    protected $paginationTheme = 'bootstrap';
 
     public function getDocumentsProperty()
     {
@@ -23,7 +24,6 @@ class Documents extends Component
         try{
             // If this fails, it will throw an error
             $this->document = Document::find($value);
-            $this->document = $value;
         } catch(Throwable $th) {
             alert()->error("Une erreur est survenue, impossible de sélectionner ce document");
         }
@@ -32,7 +32,7 @@ class Documents extends Component
     public function deleteDocument()
     {
         try {
-            $document = Document::find($this->document);
+            $document = Document::find($this->document->id);
             $document->delete();
             alert()->success("Document supprimé avec succès");
         } catch (Throwable $e) {

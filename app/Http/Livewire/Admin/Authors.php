@@ -11,6 +11,7 @@ class Authors extends Component
 {
     use WithPagination;
     public $author;
+    protected $paginationTheme = 'bootstrap';
 
     public function getAuthorsProperty()
     {
@@ -25,7 +26,6 @@ class Authors extends Component
         try{
             // If this fails, it will throw an error
             $this->author = Author::find($value);
-            $this->author = $value;
         } catch(Throwable $th) {
             alert()->error("Une erreur est survenue, impossible de sélectionner l'auteur");
         }
@@ -34,7 +34,7 @@ class Authors extends Component
     public function deleteAuthor()
     {
         try {
-            $author = Author::find($this->author);
+            $author = Author::find($this->author->id);
             $author->delete();
             alert()->success("Auteur supprimé avec succès");
         } catch (Throwable $e) {

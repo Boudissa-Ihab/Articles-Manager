@@ -41,6 +41,7 @@
                                         <th scope="col" class="sort">Date de publication</th>
                                         <th scope="col" class="sort">Sujet(s)</th>
                                         <th scope="col" class="sort">Ajouté le</th>
+                                        <th scope="col" class="sort"></th>
                                     </tr>
                                 </thead>
                                 <tbody class="list">
@@ -116,7 +117,7 @@
                 </div>
                 <div class="modal-body text-center">
                     <span class="text-danger" style="display: block;" role="alert">
-                        Avant de supprimer ce document "{{ $document->title ?? "" }}", notez que toutes les commandes liées à ce dernier seront supprimées aussi. Voulez-vous poursuivre ?
+                        Avant de supprimer ce document "{{ $this->document->title ?? "" }}", notez que toutes les commandes liées à ce dernier seront supprimées aussi. Voulez-vous poursuivre ?
                     </span>
                 </div>
                 <div class="modal-footer">

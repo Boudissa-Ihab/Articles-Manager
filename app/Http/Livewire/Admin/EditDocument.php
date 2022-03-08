@@ -211,9 +211,8 @@ class EditDocument extends Component
                         $storeDocument = $this->path->storeAs(self::FOLDER, $document->title .'.pdf');
                         if($storeDocument)
                             $document->path = $document->title. '.pdf';
-                    } else {
+                    } else
                         $document->path = $this->temporaryPath;
-                    }
 
                     if($this->photo)
                     {
@@ -222,9 +221,9 @@ class EditDocument extends Component
                         $storeImage = Storage::put(self::FOLDER .$document->title. '.webp', $webpImage->__toString());
                         if($storeImage)
                             $document->photo = $document->title. '.webp';
-                    } else {
+                    } else
                         $this->document->photo = $this->temporaryPhoto;
-                    }
+
                     $document->save();
                     $document->domains()->attach($this->selectDomains);
                     $document->authors()->attach($this->selectAuthors);

@@ -11,6 +11,7 @@ class Admins extends Component
 {
     use WithPagination;
     public $admin;
+    protected $paginationTheme = 'bootstrap';
 
     public function getAdminsProperty()
     {
@@ -25,7 +26,6 @@ class Admins extends Component
         try{
             // If this fails, it will throw an error
             $this->admin = Admin::find($value);
-            $this->admin = $value;
         } catch(Throwable $th) {
             alert()->error("Une erreur est survenue, impossible de sélectionner l'administrateur");
         }
@@ -34,7 +34,7 @@ class Admins extends Component
     public function deleteAdmin()
     {
         try {
-            $admin = Admin::find($this->admin);
+            $admin = Admin::find($this->admin->id);
             $admin->delete();
             alert()->success("Administrateur supprimé avec succès");
         } catch (Throwable $e) {

@@ -95,52 +95,54 @@
 
     <!----------------------------------- MODALS ---------------------------------->
     <!-- Delete Admin -->
-	<div wire:ignore.self class="modal fade" id="delete-admin-modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Suppression d'un administrateur</h2>
-                </div>
-                <div class="modal-body text-center">
-                    Êtes-vous sûr de vouloir supprimer l'administrateur "{{ $admin->name ?? "" }}" ? Cette action est irréversible
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-danger btn-lg" wire:click="deleteAdmin()" data-dismiss="modal" role="button">Confirmer</a>
+    @if(isset($this->admin))
+        <div wire:ignore.self class="modal fade" id="delete-admin-modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Suppression d'un administrateur</h2>
+                    </div>
+                    <div class="modal-body text-center">
+                        Êtes-vous sûr de vouloir supprimer l'administrateur "{{ $this->admin->name ?? "" }}" ? Cette action est irréversible
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                        <button type="button" class="btn btn-danger btn-lg" wire:click="deleteAdmin()" data-dismiss="modal" role="button">Confirmer</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Admin Details -->
-	<div wire:ignore.self class="modal fade" id="admin-details-modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <div class="card-body">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            @if($admin->avatar)
-                                <img src="{{ asset('storage/admins/' .$admin->avatar) }}" alt="{{ $admin->name }}" class="rounded-circle" width="150">
-                            @else
-                                <img src="{{ asset('img/brand/empty-placeholder.png') }}" alt="Pas de photo de profil">
-                            @endif
-                            <div class="mt-3">
-                                <h2>{{ $admin->name ?? "" }}</h2>
-                                <p class="text-muted mb-1">Numéro(s) de téléphone</p>
-                                <p class="text-muted font-size-sm">{{ $admin->phone1 ?? "" }}
-                                    @if(isset($admin->phone2))
-                                        / {{ $admin->phone2 ?? "" }}
-                                    @endif
-                                </p>
-                                <a href="mailto:{{ $admin->email ?? "" }}">
-                                    <button class="btn btn-primary">Email</button>
-                                </a>
+        <!-- Admin Details -->
+        <div wire:ignore.self class="modal fade" id="admin-details-modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                @if($this->admin->avatar)
+                                    <img src="{{ asset('storage/admins/' .$this->admin->avatar) }}" alt="{{ $this->admin->name }}" class="rounded-circle" width="150">
+                                @else
+                                    <img src="{{ asset('img/brand/empty-placeholder.png') }}" alt="Pas de photo de profil">
+                                @endif
+                                <div class="mt-3">
+                                    <h2>{{ $this->admin->name ?? "" }}</h2>
+                                    <p class="text-muted mb-1">Numéro(s) de téléphone</p>
+                                    <p class="text-muted font-size-sm">{{ $this->admin->phone1 ?? "" }}
+                                        @if(isset($this->admin->phone2))
+                                            / {{ $this->admin->phone2 ?? "" }}
+                                        @endif
+                                    </p>
+                                    <a href="mailto:{{ $this->admin->email ?? "" }}">
+                                        <button class="btn btn-primary">Email</button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
     <!----------------------------------- END MODALS ---------------------------------->
 </div>
