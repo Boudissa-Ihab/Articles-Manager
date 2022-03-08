@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class Slider extends Component
 {
-    public function getSlidersProperty()
+    public function getSlidesProperty()
     {
         return SliderModel::get();
     }
