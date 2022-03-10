@@ -91,7 +91,7 @@
                 </div>
                 <div class="modal-body text-center">
                     <span class="text-danger" style="display: block;" role="alert">
-                        Avant de supprimer ce domaine de recherche "{{ $domain->name ?? "" }}", notez que tous les documents liés à ce dernier seront supprimés aussi. Voulez-vous poursuivre ?
+                        Avant de supprimer ce domaine de recherche "{{ $this->domain->name ?? "" }}", notez que tous les documents liés à ce dernier seront supprimés aussi. Voulez-vous poursuivre ?
                     </span>
                 </div>
                 <div class="modal-footer">

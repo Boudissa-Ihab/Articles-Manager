@@ -12,10 +12,12 @@ use Throwable;
 class Domains extends Component
 {
     use WithPagination;
+
     public $domain;
     public $name;
     public $code;
     public $keywords;
+    protected $paginationTheme = 'bootstrap';
 
     public function rules()
     {

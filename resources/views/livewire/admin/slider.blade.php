@@ -24,9 +24,6 @@
                             <div class="col">
                                 <h3 class="mb-0">Slider</h3>
                             </div>
-
-
-
                             <div class="file-upload blue-btn btn width100">
                                 <span>Choisir des photos</span>
                                 <div
@@ -49,17 +46,8 @@
                                     </span>
                                 @enderror
                             </div>
-
-
-
-
-
-
-
-
                         </div>
                     </div>
-
 
                     {{-- <div class="mx-4 mb-4">
                         <div class="form-row">
