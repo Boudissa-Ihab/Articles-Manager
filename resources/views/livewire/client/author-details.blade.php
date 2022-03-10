@@ -1,0 +1,141 @@
+<div>
+    <!--section -->
+    <section class="hero-section">
+        <div class="bg-wrap hero-section_bg">
+            <div class="bg" data-bg="{{ asset('img/client/grey-background.jpg') }}"></div>
+        </div>
+        <div class="container">
+            <div class="hero-section_title">
+                <h2>{{ $this->author->name }}</h2>
+            </div>
+            <div class="clearfix"></div>
+            <div class="breadcrumbs-list fl-wrap">
+                <a href="{{ route('home') }}">Accueil</a>
+                <a href="{{ route('authors') }}">Auteurs</a>
+                <span>{{ $this->author->name }}</span>
+            </div>
+            <div class="scroll-down-wrap scw_transparent">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
+                <span>Faire défiler vers le bas</span>
+            </div>
+        </div>
+    </section>
+    <!-- section end  -->
+    <!--section   -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="left_fix-bar fl-wrap">
+                        <div class="profile-card-wrap fl-wrap">
+                            <div class="profile-card_media fl-wrap">
+                                <img src="{{ asset('storage/authors/' .$author->avatar) }}" alt="{{ $author->name }}">
+                                <div class="profile-card_media_content">
+                                    <h4>{{ $author->name }}</h4>
+                                </div>
+                                <div class="abs_bg"></div>
+                                <div class="profile-card-stats">
+                                    <ul>
+                                        <li><span>{{ count($this->authorDocuments) }}</span>Article(s)</li>
+                                        <li><span>1567</span> Vues</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="profile-card_content">
+                                <h4>À propos</h4>
+                                <p>{{ $author->biography }}</p>
+                                <div class="pc_contacts">
+                                    <ul>
+                                        <li>
+                                            <span>Email :</span>
+                                            <a href="mailto:{{ $author->email ?? "" }}">
+                                            @if($author->email)
+                                                {{ $author->email }}</a>
+                                            @else
+                                                /
+                                            @endif
+                                        </li>
+                                        <li>
+                                            <span>Numéro :</span>
+                                            @if($author->phone1)
+                                                {{ $author->phone1 }}</a>
+                                            @else
+                                                /
+                                            @endif
+                                        </li>
+                                        @if($author->phone2)
+                                            <li>
+                                                <span>Numéro 2 :</span> <a href="#">{{ $author->phone2 }}</a>
+                                            </li>
+                                        @endif
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="main-container fl-wrap fix-container-init">
+                        <div class="section-title">
+                            <h3>Articles de l'auteur</h3>
+                            <div class="steader_opt steader_opt_abs">
+                                <select name="filter" id="list" data-placeholder="Persons" class="style-select no-search-select">
+                                    <option>Latest</option>
+                                    <option>Most Read</option>
+                                    <option>Most Viewed</option>
+                                    <option>Most Commented</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--grid-post-wrap-->
+                        <div class="grid-post-wrap">
+                            <div class="row">
+
+                                @foreach($this->authorDocuments as $document)
+
+                                    <div class="col-md-6">
+                                        <div class="grid-post-item  bold_gpi  fl-wrap">
+                                            <div class="grid-post-media">
+                                                <a href="{{ route('documents.document-details', ['document' => $document]) }}" class="gpm_link">
+                                                    <div class="bg-wrap">
+                                                        <div class="bg" style="background-image: url('{{ Storage::url('documents/' .$document->photo) }}');"></div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="grid-post-content">
+                                                <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
+                                                <span class="post-date"><i class="far fa-clock"></i>Accepté le: {{ date("d-m-Y", strtotime($document->accepted_at)) }}, publié le: {{ date("d-m-Y", strtotime($document->published_at)) }}</span>
+                                                <p>
+                                                    {{ $document->description ?? "" }}
+                                                </p>
+                                            </div>
+                                            <div class="grid-post-footer"></div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <!--grid-post-wrap end-->
+                        <div class="clearfix"></div>
+                        <!--pagination-->
+                        <div class="pagination">
+                            {{ $this->authorDocuments->links('livewire.pagination') }}
+                        </div>
+                        <!--pagination end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="limit-box fl-wrap"></div>
+    </section>
+    <!-- section end -->
+    <!-- section  -->
+    <div class="gray-bg ad-wrap fl-wrap">
+        <div class="content-banner-wrap">
+            <img src="{{ asset('img/client/all/banner.jpg') }}" class="respimg" alt="">
+        </div>
+    </div>
+    <!-- section end -->
+</div>
