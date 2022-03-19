@@ -14,6 +14,7 @@ class Settings extends Component
 
     public $appName;
     public $email;
+    public $description;
     public $logo;
     public $facebook;
     public $instagram;
@@ -26,6 +27,7 @@ class Settings extends Component
     {
         $this->appName = setting('app_name') ?? "";
         $this->email = setting('email') ?? "";
+        $this->description = setting('description') ?? "";
         $this->facebook = setting('facebook_link') ?? "";
         $this->instagram = setting('instagram_link') ?? "";
         $this->twitter = setting('twitter_link') ?? "";
@@ -39,16 +41,19 @@ class Settings extends Component
             setting([
                 'app_name' => $this->appName ?? "",
                 'email' => $this->email ?? "",
+                'description' => $this->description ?? "",
                 'facebook_link' => $this->facebook ?? "",
                 'instagram_link' => $this->instagram ?? "",
                 'twitter_link' => $this->twitter ?? "",
                 'linkedin_link' => $this->linkedin ?? ""
             ]);
-
-            $webpImage = Image::make($this->logo)->encode('webp');
-            $storeImage = Storage::put(self::FOLDER ."Logo.webp", $webpImage->__toString());
-            if($storeImage)
-                setting(['logo' => "Logo.webp"]);
+            if($this->logo)
+            {
+                $webpImage = Image::make($this->logo)->encode('webp');
+                $storeImage = Storage::put(self::FOLDER ."Logo.webp", $webpImage->__toString());
+                if($storeImage)
+                    setting(['logo' => "Logo.webp"]);
+            }
             setting()->save();
 
             alert()->success("Paramètre enregistrés avec succès");

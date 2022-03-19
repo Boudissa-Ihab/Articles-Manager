@@ -20,6 +20,10 @@ class SettingSeeder extends Seeder
                 'value' => '',
             ],
             [
+                'key' => 'privacy_policy',
+                'value' => '',
+            ],
+            [
                 'key' => 'about_us',
                 'value' => '',
             ],
@@ -33,6 +37,10 @@ class SettingSeeder extends Seeder
             ],
             [
                 'key' => 'email',
+                'value' => '',
+            ],
+            [
+                'key' => 'description',
                 'value' => '',
             ],
             [

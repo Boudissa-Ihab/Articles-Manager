@@ -178,6 +178,10 @@
                                 <i class="fas fa-file-signature"></i>
                                 <span>Termes et conditions</span>
                             </a>
+                            <a href="{{ route('admin.privacy-policy') }}" class="dropdown-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Politique de confidentialité</span>
+                            </a>
                             <a href="{{ route('admin.settings') }}" class="dropdown-item">
                                 <i class="ni ni-settings-gear-65"></i>
                                 <span>Paramètres</span>

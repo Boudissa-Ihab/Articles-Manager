@@ -25,7 +25,7 @@
                             <fieldset class="border p-3 mb-3">
                                 <legend class="w-auto">Paramètres du site</legend>
                                 <div class="form-row">
-                                    <div class="form-group col-6" id="contact_emails">
+                                    <div class="form-group col-6" id="website-name">
                                         <div class="row">
                                             <div class="col-auto mr-auto align-self-end">
                                                 <label class="form-control-label">Nom du site</label>
@@ -33,13 +33,19 @@
                                         </div>
                                         <input wire:model.lazy="appName" class="form-control" type="text" name="name" placeholder="Nom du site">
                                     </div>
-                                    <div class="form-group col-6" id="contact_emails">
+                                    <div class="form-group col-6" id="contact-mail">
                                         <div class="row">
                                             <div class="col-auto mr-auto align-self-end">
                                                 <label class="form-control-label">Adresse mail</label>
                                             </div>
                                         </div>
                                         <input wire:model.lazy="email" class="form-control" type="email" name="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-12">
+                                        <label for="description">Description</label>
+                                        <textarea wire:model.lazy="description" class="form-control" id="description" name="description" rows="3"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-row">

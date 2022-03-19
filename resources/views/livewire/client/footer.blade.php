@@ -8,8 +8,8 @@
                     <div class="col-md-4">
                         <div class="footer-widget">
                             <div class="footer-widget-content">
-                                <a href="index.html" class="footer-logo"><img src="{{ asset('img/brand/logo.png') }}" alt=""></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eaque ipsa quae ab illo inventore veritatis et quasi architecto. </p>
+                                <a href="{{ route('home') }}" class="footer-logo"><img src="{{ asset('img/brand/logo.png') }}" alt=""></a>
+                                <p>@setting('description')</p>
                                 <div class="footer-social fl-wrap">
                                     <ul>
                                         <li><a href="@setting('facebook_link')" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -25,16 +25,16 @@
                     <!-- footer-widget -->
                     <div class="col-md-2">
                         <div class="footer-widget">
-                            <div class="footer-widget-title">Categories </div>
+                            <div class="footer-widget-title">Domaines</div>
                             <div class="footer-widget-content">
                                 <div class="footer-list footer-box fl-wrap">
-                                    <ul>
-                                        <li> <a href="#">Politics</a></li>
-                                        <li> <a href="#">Technology</a></li>
-                                        <li> <a href="#">Business</a></li>
-                                        <li> <a href="#">Sports</a></li>
-                                        <li> <a href="#">Science</a></li>
-                                    </ul>
+                                    @if($this->domains)
+                                        <ul>
+                                            @foreach ($this->domains as $domain)
+                                                <li><a href="{{ route('domains.domain', ['domain' => $domain]) }}">{{ $domain->name }}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -43,15 +43,15 @@
                     <!-- footer-widget -->
                     <div class="col-md-2">
                         <div class="footer-widget">
-                            <div class="footer-widget-title">Links</div>
+                            <div class="footer-widget-title">Liens utiles</div>
                             <div class="footer-widget-content">
                                 <div class="footer-list footer-box fl-wrap">
                                     <ul>
                                         <li> <a href="{{ route('home') }}">Accueil</a></li>
                                         <li> <a href="{{ route('about-us') }}">À propos</a></li>
                                         <li> <a href="{{ route('contact-us') }}">Contactez-nous</a></li>
-                                        <li> <a href="#">Termes et conditions</a></li>
-                                        <li> <a href="#">Politique de confidentialité</a></li>
+                                        <li> <a href="{{ route('terms-and-conditions') }}">Termes et conditions</a></li>
+                                        <li> <a href="{{ route('privacy-policy') }}">Politique de confidentialité</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -88,8 +88,8 @@
                 <div class="to-top"> <i class="fas fa-caret-up"></i></div>
                 <div class="subfooter-nav">
                     <ul>
-                        <li><a href="#">Termes et conditions</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="{{ route('terms-and-conditions') }}">Termes et conditions</a></li>
+                        <li><a href="{{ route('privacy-policy') }}">Politique de confidentialité</a></li>
                     </ul>
                 </div>
             </div>
