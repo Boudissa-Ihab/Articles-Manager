@@ -16,6 +16,7 @@ use App\Http\Livewire\Admin\EditAuthor;
 use App\Http\Livewire\Admin\EditDocument;
 use App\Http\Livewire\Admin\Login;
 use App\Http\Livewire\Admin\Orders;
+use App\Http\Livewire\Admin\PrivacyPolicy;
 use App\Http\Livewire\Admin\Profile;
 use App\Http\Livewire\Admin\Settings;
 use App\Http\Livewire\Admin\Slider;
@@ -53,6 +54,7 @@ Route::middleware(['auth:admin'])->name('admin.')->group(function () {
 
     Route::get('/about-us', AboutUs::class)->name('about-us');
     Route::get('/terms-conditions', TermsConditions::class)->name('terms-conditions');
+    Route::get('/privacy-policy', PrivacyPolicy::class)->name('privacy-policy');
     Route::get('/settings', Settings::class)->name('settings');
 
     Route::get('/clients', Clients::class)->name('clients');

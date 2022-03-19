@@ -10,6 +10,7 @@ use App\Http\Livewire\Client\DomainDetails;
 use App\Http\Livewire\Client\Domains;
 use App\Http\Livewire\Client\Home;
 use App\Http\Livewire\Client\NotFound;
+use App\Http\Livewire\Client\PrivacyPolicy;
 use App\Http\Livewire\Client\TermsConditions;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,7 @@ Route::get('/', Home::class)->name('home');
 Route::get('/contact-us', ContactUs::class)->name('contact-us');
 Route::get('/about-us', AboutUs::class)->name('about-us');
 Route::get('/terms-and-conditions', TermsConditions::class)->name('terms-and-conditions');
+Route::get('/privacy-policy', PrivacyPolicy::class)->name('privacy-policy');
 
 Route::get('/authors', Authors::class)->name('authors');
 Route::get('/authors/{author}', AuthorDetails::class)->name('authors.author');

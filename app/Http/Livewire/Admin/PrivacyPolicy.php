@@ -5,14 +5,14 @@ namespace App\Http\Livewire\Admin;
 use Livewire\Component;
 use Throwable;
 
-class TermsConditions extends Component
+class PrivacyPolicy extends Component
 {
-    public $termsConditions;
+    public $privacyPolicy;
 
     public function save()
     {
         try {
-            setting(['terms_and_conditions' => $this->termsConditions]);
+            setting(['privacy_policy' => $this->privacyPolicy]);
             setting()->save();
             alert()->success("Contenu enregistré avec succès");
             return redirect()->route('admin.dashboard');
@@ -23,6 +23,6 @@ class TermsConditions extends Component
 
     public function render()
     {
-        return view('livewire.admin.terms-conditions');
+        return view('livewire.admin.privacy-policy');
     }
 }

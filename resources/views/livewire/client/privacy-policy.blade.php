@@ -3,7 +3,7 @@
         <div class="container">
             <div class="breadcrumbs-header_url">
                 <a href="{{ route('home') }}">Accueil</a>
-                <span>Termes et conditions</span>
+                <span>Politique de confidentialité</span>
             </div>
             <div class="scroll-down-wrap">
                 <div class="mousey">
@@ -20,10 +20,10 @@
                 <div class="col-md-12">
                     <div class="section-title sect_dec">
                         <h2>@setting('app_name')</h2>
-                        <h4>Termes et conditions</h4>
+                        <h4>Politique de confidentialité</h4>
                     </div>
                     <div class="about-wrap">
-                        <p> @setting('terms_and_conditions') </p>
+                        <p>@setting('privacy_policy')</p>
                     </div>
                 </div>
             </div>

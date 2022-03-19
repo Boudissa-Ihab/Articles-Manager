@@ -36,7 +36,7 @@
                 <!-- logo holder  -->
                 <a href="{{ route('home') }}" class="logo-holder"><img src="{{ asset('img/brand/logo.png') }}" alt="Logo PECAN"></a>
                 <!-- logo holder end -->
-                <div class="search_btn htact show_search-btn"><i class="fas fa-search"></i> <span class="header-tooltip">Search</span></div>
+                <div class="search_btn htact show_search-btn"><i class="fas fa-search"></i> <span class="header-tooltip">Rechercher</span></div>
 
 
                 {{-- <div class="srf_btn htact show-reg-form"><i class="fas fa-user"></i> <span class="header-tooltip">Se connecter</span></div> --}}
@@ -128,11 +128,12 @@
                                 <a href="{{ route('authors') }}" class="{{ Request::is('authors/*') || Request::is('authors') ? 'act-link' : '' }}">Auteurs</a>
                             </li>
                             <li>
-                                <a href="#" class="{{ Request::is('about-us') || Request::is('contact-us') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
+                                <a href="" class="{{ Request::is('about-us') || Request::is('contact-us') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
                                 <ul>
                                     <li><a href="{{ route('about-us') }}">À propos</a></li>
                                     <li><a href="{{ route('contact-us') }}">Contactez-nous</a></li>
-                                    <li><a href="{{ route('terms-and-conditions') }}">Termes & conditions</a></li>
+                                    <li><a href="{{ route('terms-and-conditions') }}">Termes et conditions</a></li>
+                                    <li><a href="{{ route('privacy-policy') }}">Politique de confidentialité</a></li>
                                 </ul>
                             </li>
                         </ul>
