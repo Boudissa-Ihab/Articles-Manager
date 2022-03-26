@@ -27,14 +27,13 @@
                 <div class="col-md-8">
                     <div class="main-container fl-wrap fix-container-init">
                         <div class="section-title">
-                            <h2>Most Recent World News</h2>
-                            <h4>Don't miss daily news</h4>
-                            <div class="steader_opt steader_opt_abs">
-                                <select name="filter" id="list" data-placeholder="Persons" class="style-select no-search-select">
-                                    <option>Latest</option>
-                                    <option>Most Read</option>
-                                    <option>Most Viewed</option>
-                                    <option>Most Commented</option>
+                            <h2>Liste des auteurs d'articles</h2>
+                            <h4>Cliquez sur un auteur pour voir ses articles</h4>
+                            <div class="steader_opt steader_opt_abs" wire:ignore>
+                                <select wire:model="filter" id="list" class="style-select no-search-select">
+                                    <option value="">Sélectionner un filtre :</option>
+                                    <option value="AZ">Noms A-Z</option>
+                                    <option value="ZA">Noms Z-A</option>
                                 </select>
                             </div>
                         </div>
@@ -174,3 +173,14 @@
         </div>
     </div>
 </div>
+
+@push('scripts')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#list').niceSelect();
+            $('#list').on('change', function (e) {
+                @this.set('filter', e.target.value);
+        });
+    });
+    </script>
+@endpush

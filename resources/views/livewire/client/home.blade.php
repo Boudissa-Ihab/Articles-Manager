@@ -10,24 +10,22 @@
                         <div class="section-title sect_dec">
                             <h2>Liste d'articles</h2>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="picker-wrap-container fl-wrap">
-                                    <div class="picker-wrap-controls">
-                                        <ul class="fl-wrap">
-                                            <li><span class="pwc_up"><i class="fas fa-caret-up"></i></span></li>
-                                            <li><span class="pwc_pause"><i class="fas fa-pause"></i></span></li>
-                                            <li><span class="pwc_down"><i class="fas fa-caret-down"></i></span></li>
-                                        </ul>
-                                    </div>
-
-                                    @if(count($this->documents))
+                        @if(count($this->documents))
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="picker-wrap-container fl-wrap">
+                                        <div class="picker-wrap-controls">
+                                            <ul class="fl-wrap">
+                                                <li><span class="pwc_up"><i class="fas fa-caret-up"></i></span></li>
+                                                <li><span class="pwc_pause"><i class="fas fa-pause"></i></span></li>
+                                                <li><span class="pwc_down"><i class="fas fa-caret-down"></i></span></li>
+                                            </ul>
+                                        </div>
                                         <div class="picker-wrap fl-wrap">
                                             <div class="list-post-wrap fl-wrap">
                                                 @foreach($this->documents as $document)
                                                     <!--list-post-->
                                                     <div class="list-post fl-wrap">
-
                                                         <div class="list-post-content" style="width: 100% !important;">
                                                             @foreach($document->domains as $domain)
                                                                 <a class="post-category-marker" style="margin-right: 6px;" href="{{ route('domains.domain', ['domain' => $domain]) }}">{{ $domain->name }}</a>
@@ -50,12 +48,12 @@
                                                 @endforeach
                                             </div>
                                         </div>
-                                    @endif
-                                    <div class="controls-limit fl-wrap"></div>
+                                        <div class="controls-limit fl-wrap"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <a href="{{ route('documents') }}" class="dark-btn fl-wrap">Voir plus</a>
+                            <a href="{{ route('documents') }}" class="dark-btn fl-wrap">Voir plus</a>
+                        @endif
                     </div>
                     <div class="limit-box"></div>
                 </div>
@@ -141,7 +139,7 @@
         <div class="fs-carousel-wrap">
             <div class="fs-carousel-wrap_title">
                 <div class="fs-carousel-wrap_title-wrap fl-wrap">
-                    <h4>Dernier article de chaque domaine</h4>
+                    <h4>Dernier article de chaque domaine de recherche</h4>
                     <h5>Ne ratez pas les nouveautés</h5>
                 </div>
                 <div class="abs_bg"></div>
@@ -162,7 +160,7 @@
                                             <div class="bg" style="background-image: url('{{ Storage::url('documents/' .$document->photo) }}');"></div>
                                             <div class="grid-post-media_title">
                                                 @if($document->featured)
-                                                    <div class="post-category-marker">Populaire</div>
+                                                    <div class="post-category-marker" style="z-index: 1;">Populaire</div>
                                                 @endif
                                                 <h4><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h4>
                                                 {{-- <span class="video-date"><i class="fas fa-clock"></i> 02 March 2022</span>

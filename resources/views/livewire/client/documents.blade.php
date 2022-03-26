@@ -21,8 +21,8 @@
                 <div class="section-title">
                     <h2>Articles scientifiques</h2>
                     <h4>Cliquez sur un article pour plus de détails</h4>
-                    <div class="steader_opt steader_opt_abs">
-                        <select wire:model.lazy="filter" id="list" class="style-select no-search-select">
+                    <div class="steader_opt steader_opt_abs" wire:ignore>
+                        <select wire:model="filter" id="list" class="style-select no-search-select">
                             <option value="">Sélectionner un filtre :</option>
                             <option value="AZ">Articles A-Z</option>
                             <option value="ZA">Articles Z-A</option>
@@ -51,7 +51,7 @@
                                         @endif
                                     </div>
                                     @if($document->featured)
-                                        <div class="post-category-marker purp-bg">Populaire</div>
+                                        <div class="post-category-marker purp-bg" style="z-index: 1;">Populaire</div>
                                     @endif
                                     <div class="grid-post-content">
                                         <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
@@ -78,7 +78,6 @@
                     </div>
                 @endif
 
-
                 <div class="clearfix"></div>
                 <!--pagination-->
                 <div class="pagination">
@@ -98,3 +97,14 @@
     </div> --}}
     <!-- AD end -->
 </div>
+
+@push('scripts')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#list').niceSelect();
+            $('#list').on('change', function (e) {
+                @this.set('filter', e.target.value);
+        });
+    });
+    </script>
+@endpush

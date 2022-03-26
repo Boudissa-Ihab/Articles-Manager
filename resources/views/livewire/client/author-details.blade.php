@@ -80,12 +80,16 @@
                     <div class="main-container fl-wrap fix-container-init">
                         <div class="section-title">
                             <h3>Articles de l'auteur</h3>
-                            <div class="steader_opt steader_opt_abs">
-                                <select name="filter" id="list" data-placeholder="Persons" class="style-select no-search-select">
-                                    <option>Latest</option>
-                                    <option>Most Read</option>
-                                    <option>Most Viewed</option>
-                                    <option>Most Commented</option>
+                            <div class="steader_opt steader_opt_abs" wire:ignore>
+                                <select wire:model="filter" id="list" class="style-select no-search-select">
+                                    <option value="">Sélectionner un filtre :</option>
+                                    <option value="AZ">Articles A-Z</option>
+                                    <option value="ZA">Articles Z-A</option>
+                                    <option value="first_accepted">Date d'acceptation (ancienne)</option>
+                                    <option value="last_accepted">Date d'acceptation (récente)</option>
+                                    <option value="first_published">Date de publication (ancienne)</option>
+                                    <option value="last_published">Date de publication (récente)</option>
+                                    <option value="featured">Articles populaires</option>
                                 </select>
                             </div>
                         </div>
@@ -139,3 +143,14 @@
     </div>
     <!-- section end -->
 </div>
+
+@push('scripts')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#list').niceSelect();
+            $('#list').on('change', function (e) {
+                @this.set('filter', e.target.value);
+        });
+    });
+    </script>
+@endpush
