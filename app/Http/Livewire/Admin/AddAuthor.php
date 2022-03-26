@@ -21,7 +21,7 @@ class AddAuthor extends Component
     public $phone2;
     public $biography;
     public $avatar;
-    const FOLDER = "public/authors/";
+    const FOLDER = "authors/";
 
 
     public function rules()

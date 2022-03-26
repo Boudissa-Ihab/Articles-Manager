@@ -26,7 +26,7 @@ class EditAuthor extends Component
     public $temporaryImage;     // Used to store old author's image
     public $temporaryName;     // Used to store author's name before update
                             // in order to delete the related image if changed
-    const FOLDER = "public/authors/";
+    const FOLDER = "authors/";
 
 
     public function rules()

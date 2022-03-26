@@ -80,7 +80,7 @@
                             <div class="clearfix"></div>
                             <div class="single-post-content_column">
                                 <div class="share-holder ver-share fl-wrap">
-                                    <div class="share-title">Partager cet <br> Article</div>
+                                    <div class="share-title">Partager <br> l'article</div>
                                     <div class="share-container isShare"></div>
                                 </div>
                             </div>

@@ -34,7 +34,7 @@ class AddDocument extends Component
     public $featured = false;
     public $path;
     public $photo;
-    const FOLDER = "public/documents/";
+    const FOLDER = "documents/";
 
     public function rules()
     {

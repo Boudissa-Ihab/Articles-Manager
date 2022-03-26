@@ -20,7 +20,7 @@ class Slider extends Component
 
     public $slide;
     public $photos = [];
-    const FOLDER = "public/slides/";
+    const FOLDER = "slides/";
 
     public function rules()
     {

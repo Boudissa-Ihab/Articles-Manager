@@ -25,9 +25,9 @@
                                         <div class="post-widget-item-content">
                                             <h4><a href="{{ route('documents.document-details', ['document' => $featured]) }}">{{ $featured->title }}</a></h4>
                                             <ul class="pwic_opt">
-                                                <li><span><i class="far fa-clock"></i> 25 may 2022</span></li>
-                                                <li><span><i class="far fa-comments-alt"></i> 12</span></li>
-                                                <li><span><i class="fal fa-eye"></i> 654</span></li>
+                                                <li><span><i class="fas fa-clock"></i> 25 may 2022</span></li>
+                                                <li><span><i class="fas fa-comments"></i> 12</span></li>
+                                                <li><span><i class="fas fa-eye"></i> 654</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -49,9 +49,9 @@
                                         <div class="post-widget-item-content">
                                             <h4><a href="{{ route('documents.document-details', ['document' => $latest]) }}">{{ $latest->title }}</a></h4>
                                             <ul class="pwic_opt">
-                                                <li><span><i class="far fa-clock"></i> 05 april 2021</span></li>
-                                                <li><span><i class="far fa-comments-alt"></i> 16</span></li>
-                                                <li><span><i class="fal fa-eye"></i> 727</span></li>
+                                                <li><span><i class="fas fa-clock"></i> 05 april 2021</span></li>
+                                                <li><span><i class="fas fa-comments"></i> 16</span></li>
+                                                <li><span><i class="fas fa-eye"></i> 727</span></li>
                                             </ul>
                                         </div>
                                     </div>

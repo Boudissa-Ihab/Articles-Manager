@@ -12,9 +12,9 @@
                     <div class="hnt_title">Actualité</div>
                     <div class="header_news-ticker fl-wrap">
                         <ul>
-                            <li><a href="post-single.html">Test 1</a></li>
-                            <li><a href="post-single.html">Test 2</a></li>
-                            <li><a href="post-single.html">Test 3</a></li>
+                            <li><a href="javascript:void(0)">Test 1</a></li>
+                            <li><a href="javascript:void(0)">Test 2</a></li>
+                            <li><a href="javascript:void(0)">Test 3</a></li>
                         </ul>
                     </div>
                     <div class="n_contr-wrap">
@@ -128,7 +128,7 @@
                                 <a href="{{ route('authors') }}" class="{{ Request::is('authors/*') || Request::is('authors') ? 'act-link' : '' }}">Auteurs</a>
                             </li>
                             <li>
-                                <a href="" class="{{ Request::is('about-us') || Request::is('contact-us') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
+                                <a href="javascript:void(0)" class="{{ Request::is('about-us') || Request::is('contact-us') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
                                 <ul>
                                     <li><a href="{{ route('about-us') }}">À propos</a></li>
                                     <li><a href="{{ route('contact-us') }}">Contactez-nous</a></li>

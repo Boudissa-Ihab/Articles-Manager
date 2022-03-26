@@ -661,7 +661,7 @@ blockquote:before {
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
-	min-width:150px;
+	min-width:220px;
 	top: 53px;
 	left: 0;
 	z-index: 1;

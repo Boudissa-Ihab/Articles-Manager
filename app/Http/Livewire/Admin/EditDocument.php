@@ -40,7 +40,7 @@ class EditDocument extends Component
     public $temporaryPhoto;
     public $temporaryDomains = [];
     public $temporaryAuthors = [];
-    const FOLDER = "public/documents/";
+    const FOLDER = "documents/";
 
     public function rules()
     {

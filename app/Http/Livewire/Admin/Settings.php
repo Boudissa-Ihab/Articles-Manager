@@ -21,7 +21,7 @@ class Settings extends Component
     public $twitter;
     public $linkedin;
     public $temporaryLogo;
-    const FOLDER = "public/logo/";
+    const FOLDER = "logo/";
 
     public function mount()
     {

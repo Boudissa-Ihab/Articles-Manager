@@ -25,7 +25,7 @@ class Profile extends Component
     public $password;
     public $password_confirmation;
     public $avatar;
-    const FOLDER = "public/admins/";
+    const FOLDER = "admins/";
 
     protected $messages = [
         'name.required' => "Le nom ne peut pas être vide",

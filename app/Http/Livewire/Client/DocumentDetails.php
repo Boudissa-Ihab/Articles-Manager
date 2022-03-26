@@ -11,7 +11,7 @@ use Throwable;
 class DocumentDetails extends Component
 {
     public Document $document;
-    const FOLDER = "public/documents/";
+    const FOLDER = "documents/";
 
     public function getDomainsProperty()
     {

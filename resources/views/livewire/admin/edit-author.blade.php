@@ -93,7 +93,7 @@
                                 </span>
                             </div> --}}
                             <div class="form-row">
-                                <label for="avatar" class="col-form-label mr-2">Image <sup>(optionnelle)</sup> : </label>
+                                <label for="avatar" class="col-form-label mr-2">Image : </label>
                                 <div class="file-upload blue-btn btn width100">
                                     <span>Choisir une photo</span>
                                     <div
