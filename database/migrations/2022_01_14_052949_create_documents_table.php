@@ -26,6 +26,8 @@ class CreateDocumentsTable extends Migration
             $table->decimal('price', 6, 2)->default(0);
             $table->string('photo')->nullable();
             $table->boolean('featured');
+            $table->unsignedInteger('download_count')->default('0');
+            $table->timestamp('last_download')->nullable();
             $table->timestamps();
         });
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Client;
 
+use App\Events\DownloadCount;
 use App\Models\Document;
 use App\Models\Domain;
 use Illuminate\Support\Facades\Storage;
@@ -22,6 +23,7 @@ class DocumentDetails extends Component
     {
         try{
             $document = Document::find($file['id']);
+            DownloadCount::dispatch($document);
             return Storage::download(self::FOLDER . $document->path);
         } catch(Throwable $th) {
             session()->flash("Impossible de télécharger ce fichier");

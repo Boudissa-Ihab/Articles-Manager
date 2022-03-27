@@ -25,7 +25,9 @@ class Document extends Model
         'is_free',
         'price',
         'photo',
-        'featured'
+        'featured',
+        'download_count',
+        'last_download'
     ];
 
     public function domains()

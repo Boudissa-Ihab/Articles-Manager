@@ -165,6 +165,9 @@ class AddDocument extends Component
                     $document->is_free = $this->is_free ?? true;
                     $document->price = $document->is_free ? 0 : $this->price;
                     $document->featured = $this->featured ?? false;
+                    $document->download_count = 0;
+                    $document->last_download = null;
+
                     /* Saving document as PDF file */
                     $storeDocument = $this->path->storeAs(self::FOLDER, $document->title .'.pdf');
                     if($storeDocument)
