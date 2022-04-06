@@ -128,7 +128,8 @@
                                 <a href="{{ route('authors') }}" class="{{ Request::is('authors/*') || Request::is('authors') ? 'act-link' : '' }}">Auteurs</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" class="{{ Request::is('about-us') || Request::is('contact-us') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
+                                <a href="javascript:void(0)" class="{{ Request::is('about-us') || Request::is('contact-us')
+                                || Route::is('terms-and-conditions') || Route::is('privacy-policy') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
                                 <ul>
                                     <li><a href="{{ route('about-us') }}">À propos</a></li>
                                     <li><a href="{{ route('contact-us') }}">Contactez-nous</a></li>

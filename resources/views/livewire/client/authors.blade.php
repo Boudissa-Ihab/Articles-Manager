@@ -39,11 +39,8 @@
                         </div>
 
                         @if(count($this->authors))
-
                             <div class="list-post-wrap">
-
                                 @foreach ($this->authors as $author)
-
                                     <div class="list-post fl-wrap">
                                         <div class="list-post-media">
                                             <a href="{{ route('authors.author', ['author' => $author]) }}">
@@ -61,28 +58,19 @@
                                             <p>{{ Str::limit($author->biography, 424) }}</p>
                                         </div>
                                     </div>
-
                                 @endforeach
-
-
-
                             </div>
                             <div class="clearfix"></div>
                             <div class="pagination">
                                 {{ $this->authors->links('livewire.pagination') }}
                             </div>
-
-
                         @else
-
 
 
 
                             <img src="{{ asset('img/client/loading2.gif') }}" alt="">
 
                         {{-- ADD DIV WHEN THERE ARE NO AUTHORS --}}
-
-
 
 
 
@@ -108,10 +96,7 @@
                         <!-- box-widget  end -->
 
 
-
-
                         @livewire('client.components.domains-list')
-
 
 
                         {{-- @if(count($this->domains))
@@ -126,8 +111,6 @@
                                 </div>
                             </div>
                         @endif --}}
-
-
 
 
                         <!-- box-widget -->

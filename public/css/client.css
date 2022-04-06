@@ -2064,7 +2064,7 @@ section {
 	overflow: hidden;
 	position: relative;
 	border-radius: 4px 4px 0 0;
- 	height: 220px;
+ 	height: 370px;
 }
 .grid-post-media a.gpm_link {
 	float: left;
@@ -2277,10 +2277,11 @@ section {
 	margin:0  8px;
 }
 .gallery-item {
-    width:33.3%;
+    width: 20%;
     position: relative;
     float: left;
-    padding: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 .list-post {
 	padding-bottom: 30px;
@@ -2297,9 +2298,9 @@ section {
 }
 .list-post-media {
 	position: relative;
-	width:40%;
+	width:30%;
 	overflow: hidden;
-	height: 190px;
+	height: 220px;
 	float: left;
 	border-radius: 4px;
 }
@@ -3582,7 +3583,7 @@ section {
 }
 .post-widget-item-media img {
 	width: 100%;
-	height: auto;
+	height: 130px;
 }
 .post-widget-item-content{
 	float: left;

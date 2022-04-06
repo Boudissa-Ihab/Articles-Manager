@@ -6,7 +6,7 @@
             <div class="content-tabs-wrap tabs-act tabs-widget fl-wrap">
                 <div class="content-tabs fl-wrap">
                     <ul class="tabs-menu fl-wrap no-list-style">
-                        <li class="current"><a href="#tab-popular"> Document populaires </a></li>
+                        <li class="current"><a href="#tab-popular">Document populaires </a></li>
                         <li><a href="#tab-resent">Nouveaux documents</a></li>
                     </ul>
                 </div>
@@ -20,15 +20,12 @@
                                     <div class="post-widget-item fl-wrap">
                                         <div class="post-widget-item-media">
                                             <a href="{{ route('documents.document-details', ['document' => $featured]) }}">
-                                                <img src="{{ asset('img/client/all/thumbs/1.jpg') }}"  alt="{{ $featured->title }}"></a>
+                                                <img src="{{ asset('storage/documents/' .$featured->photo) }}"  alt="{{ $featured->title }}"></a>
                                         </div>
                                         <div class="post-widget-item-content">
-                                            <h4><a href="{{ route('documents.document-details', ['document' => $featured]) }}">{{ $featured->title }}</a></h4>
-                                            <ul class="pwic_opt">
-                                                <li><span><i class="fas fa-clock"></i> 25 may 2022</span></li>
-                                                <li><span><i class="fas fa-comments"></i> 12</span></li>
-                                                <li><span><i class="fas fa-eye"></i> 654</span></li>
-                                            </ul>
+                                            <h4>
+                                                <a href="{{ route('documents.document-details', ['document' => $featured]) }}">{{ Str::limit($featured->title, 100) }}</a>
+                                            </h4>
                                         </div>
                                     </div>
                                 @endforeach
@@ -44,15 +41,12 @@
                                     <div class="post-widget-item fl-wrap">
                                         <div class="post-widget-item-media">
                                             <a href="{{ route('documents.document-details', ['document' => $latest]) }}">
-                                                <img src="{{ asset('img/client/all/thumbs/1.jpg') }}"  alt="{{ $latest->title }}"></a>
+                                                <img src="{{ asset('storage/documents/' .$latest->photo) }}"  alt="{{ $latest->title }}"></a>
                                         </div>
                                         <div class="post-widget-item-content">
-                                            <h4><a href="{{ route('documents.document-details', ['document' => $latest]) }}">{{ $latest->title }}</a></h4>
-                                            <ul class="pwic_opt">
-                                                <li><span><i class="fas fa-clock"></i> 05 april 2021</span></li>
-                                                <li><span><i class="fas fa-comments"></i> 16</span></li>
-                                                <li><span><i class="fas fa-eye"></i> 727</span></li>
-                                            </ul>
+                                            <h4>
+                                                <a href="{{ route('documents.document-details', ['document' => $latest]) }}">{{ Str::limit($latest->title, 100) }}</a>
+                                            </h4>
                                         </div>
                                     </div>
                                 @endforeach

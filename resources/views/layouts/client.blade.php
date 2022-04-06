@@ -33,19 +33,7 @@
 
 
 
-
-
-
-
-
             @livewire('client.header')
-
-
-
-
-
-
-
 
 
 
@@ -71,18 +59,7 @@
 
 
 
-
-
-
-
-
                 @livewire('client.footer')
-
-
-
-
-
-
 
 
 

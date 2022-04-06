@@ -96,10 +96,8 @@
                         <!--grid-post-wrap-->
                         <div class="grid-post-wrap">
                             <div class="row">
-
                                 @foreach($this->authorDocuments as $document)
-
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="grid-post-item  bold_gpi  fl-wrap">
                                             <div class="grid-post-media">
                                                 <a href="{{ route('documents.document-details', ['document' => $document]) }}" class="gpm_link">
@@ -107,15 +105,32 @@
                                                         <div class="bg" style="background-image: url('{{ Storage::url('documents/' .$document->photo) }}');"></div>
                                                     </div>
                                                 </a>
+                                                @if($document->is_free)
+                                                    <span class="post-media_title">Open Access</span>
+                                                @endif
                                             </div>
+                                            @if($document->featured)
+                                                <div class="post-category-marker purp-bg" style="z-index: 1;">Populaire</div>
+                                            @endif
                                             <div class="grid-post-content">
                                                 <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
-                                                <span class="post-date"><i class="far fa-clock"></i>Accepté le: {{ date("d-m-Y", strtotime($document->accepted_at)) }}, publié le: {{ date("d-m-Y", strtotime($document->published_at)) }}</span>
                                                 <p>
-                                                    {{ $document->description ?? "" }}
+                                                    {{ Str::limit($document->description, 100) ?? "" }}
                                                 </p>
                                             </div>
-                                            <div class="grid-post-footer"></div>
+                                            <div class="grid-post-footer">
+                                                <div class="author-link">
+                                                    @foreach ($document->authors as $author)
+                                                        <a href="{{ route('authors.author', ['author' => $author]) }}">
+                                                            @if ($loop->last)
+                                                                {{ $author->name }}
+                                                            @else
+                                                                {{ $author->name }} -
+                                                            @endif
+                                                        </a>
+                                                    @endforeach
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 @endforeach

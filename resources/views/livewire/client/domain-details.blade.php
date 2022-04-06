@@ -51,9 +51,11 @@
                                             <span class="post-media_title">Open Access</span>
                                         @endif
                                     </div>
+                                    @if($document->featured)
+                                        <div class="post-category-marker purp-bg" style="z-index: 1;">Populaire</div>
+                                    @endif
                                     <div class="grid-post-content">
                                         <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
-                                        <span class="post-date"><i class="far fa-clock"></i>  18 may 2022</span>
                                         <p>{{ Str::limit($document->description, 100) }}</p>
                                     </div>
                                     <div class="grid-post-footer">
