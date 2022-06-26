@@ -6,7 +6,7 @@
             <div class="content-tabs-wrap tabs-act tabs-widget fl-wrap">
                 <div class="content-tabs fl-wrap">
                     <ul class="tabs-menu fl-wrap no-list-style">
-                        <li class="current"><a href="#tab-popular">Document populaires </a></li>
+                        <li class="current"><a href="#tab-popular">Documents populaires </a></li>
                         <li><a href="#tab-resent">Nouveaux documents</a></li>
                     </ul>
                 </div>

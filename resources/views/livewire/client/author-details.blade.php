@@ -2,7 +2,7 @@
     <!--section -->
     <section class="hero-section">
         <div class="bg-wrap hero-section_bg">
-            <div class="bg" data-bg="{{ asset('img/client/grey-background.jpg') }}"></div>
+            <div class="bg" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);"></div>
         </div>
         <div class="container">
             <div class="hero-section_title">

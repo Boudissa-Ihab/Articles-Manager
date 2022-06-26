@@ -1,7 +1,7 @@
 <div>
     <section class="hero-section">
         <div class="bg-wrap hero-section_bg">
-            <div class="bg" data-bg="{{ asset('img/client/grey-background.jpg') }}"></div>
+            <div class="bg" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);"></div>
         </div>
         <div class="container">
             <div class="hero-section_title">
@@ -28,9 +28,9 @@
                     <div class="pr-subtitle prs_big">Détails</div>
                     <!--card-item -->
                     <ul class="contacts-list fl-wrap">
-                        <li><span><i class="fas fa-map-marker"></i> Adresse :</span> <a href="#">USA 27TH Brooklyn NY</a></li>
-                        <li><span><i class="fas fa-phone"></i> Numéro de téléphone :</span> <a href="#">+7(123)987654</a></li>
-                        <li><span><i class="fas fa-envelope"></i> Email :</span> <a href="#">example@domain.com</a></li>
+                        <li><span><i class="fas fa-map-marker"></i> Adresse :</span> <a href="">USA 27TH Brooklyn NY</a></li>
+                        <li><span><i class="fas fa-phone"></i> Numéro de téléphone :</span> <a href="">+7(123)987654</a></li>
+                        <li><span><i class="fas fa-envelope"></i> Email :</span> <a href="">example@domain.com</a></li>
                     </ul>
                     <!--card-item end -->
                     <div class="contact-social fl-wrap">
@@ -40,6 +40,10 @@
                             <li><a href="@setting('twitter_link')" target="_blank"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="@setting('instagram_link')" target="_blank"><i class="fab fa-instagram"></i></a></li>
                             <li><a href="@setting('linkedin_link')" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="@setting('youtube_link')" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="@setting('zotero_link')" target="_blank">
+                                <img src="{{ asset('img/brand/zotero.png') }}" style="width: 16px; height: 16px;" alt="Zotero"></a>
+                            </li>
                         </ul>
                     </div>
                     <!-- box-widget -->
@@ -77,7 +81,7 @@
                             <div id="message"></div>
                             <form method="POST" wire:submit.prevent="send" class="custom-form" name="contactform" id="contactform">
                                 <fieldset>
-                                    <input wire:model.lazy="name" type="text" name="name" id="name" placeholder="* Nom complet"/>
+                                    <input wire:model.lazy="name" type="text" name="name" id="name" placeholder="Nom complet"/>
                                     @error('name')
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong style="font-size: 13px;">{{ $message }}</strong>

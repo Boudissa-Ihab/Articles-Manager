@@ -1,20 +1,26 @@
 <div>
-    <div class="breadcrumbs-header fl-wrap">
+    <section class="hero-section">
+        <div class="bg-wrap hero-section_bg">
+            <div class="bg" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);"></div>
+        </div>
         <div class="container">
-            <div class="breadcrumbs-header_url">
+            <div class="hero-section_title">
+                <h2>Document : {{ $document->title }}</h2>
+            </div>
+            <div class="clearfix"></div>
+            <div class="breadcrumbs-list fl-wrap">
                 <a href="{{ route('home') }}">Accueil</a>
                 <a href="{{ route('documents') }}">Documents</a>
                 <span>{{ $document->title }}</span>
             </div>
-            <div class="scroll-down-wrap">
+            <div class="scroll-down-wrap scw_transparent">
                 <div class="mousey">
                     <div class="scroller"></div>
                 </div>
                 <span>Faire défiler vers le bas</span>
             </div>
         </div>
-        <div class="pwh_bg"></div>
-    </div>
+    </section>
     <!--section -->
     <section>
         <div class="container">
@@ -277,7 +283,7 @@
                             <div class="box-widget-content">
                                 <ul class="cat-wid-list">
                                     @foreach ($this->domains as $domain)
-                                        <li><a href="#">{{ $domain->name }}</a><span>{{ $domain->documents_count }}</span></li>
+                                        <li><a href="{{ route('domains.domain', ['domain' => $domain->id]) }}">{{ $domain->name }}</a><span>{{ $domain->documents_count }}</span></li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -292,10 +298,10 @@
     </section>
     <!-- section end -->
     <!-- section  -->
-    <div class="gray-bg ad-wrap fl-wrap">
+    {{-- <div class="gray-bg ad-wrap fl-wrap">
         <div class="content-banner-wrap">
             <img src="{{ asset('img/client/all/banner.jpg') }}" class="respimg" alt="">
         </div>
-    </div>
+    </div> --}}
     <!-- section end -->
 </div>

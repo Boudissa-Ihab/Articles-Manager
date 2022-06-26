@@ -1,7 +1,7 @@
 <div>
     <section class="hero-section">
         <div class="bg-wrap hero-section_bg">
-            <div class="bg" data-bg="images/bg/1.jpg"></div>
+            <div class="bg" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);"></div>
         </div>
         <div class="container">
             <div class="hero-section_title">
@@ -79,6 +79,14 @@
                                     <a href="@setting('linkedin_link')" target="_blank" class="facebook-soc">
                                         <i class="fab fa-linkedin"></i>
                                         <span class="soc-widget_counter">Linkedin</span>
+                                    </a>
+                                    <a href="@setting('youtube_link')" target="_blank" class="youtube-soc">
+                                        <i class="fab fa-youtube"></i>
+                                        <span class="soc-widget_counter">Youtube</span>
+                                    </a>
+                                    <a href="@setting('zotero_link')" target="_blank">
+                                        <i class="fab fa-zotero"></i>
+                                        <span class="soc-widget_counter">Zotero</span>
                                     </a>
                                 </div>
                             </div>
