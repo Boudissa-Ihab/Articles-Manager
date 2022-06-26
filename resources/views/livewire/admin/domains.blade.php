@@ -34,6 +34,7 @@
                                         <th scope="col" class="sort" data-sort="budget">#</th>
                                         <th scope="col" class="sort" data-sort="budget">Nom</th>
                                         <th scope="col" class="sort" data-sort="budget">Code</th>
+                                        <th scope="col" class="sort" data-sort="budget">Ajouté le</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -44,10 +45,17 @@
                                                 {{ $domain->id ?? "" }}
                                             </td>
                                             <td>
-                                                {{ $domain->name ?? "" }}
+                                                {{ $domain->name }}
                                             </td>
                                             <td class="budget">
-                                                {{ $domain->code ?? "" }}
+                                                @if($domain->code)
+                                                    {{ $domain->code }}
+                                                @else
+                                                    /
+                                                @endif
+                                            </td>
+                                            <td>
+                                                {{ date("d-m-Y", strtotime($domain->created_at)) }}
                                             </td>
                                             <td class="text-right">
                                                 <a href="" class="btn btn-warning btn-sm" data-target="#edit-domain-modal"

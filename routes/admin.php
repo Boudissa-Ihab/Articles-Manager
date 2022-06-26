@@ -14,6 +14,7 @@ use App\Http\Livewire\Admin\Documents;
 use App\Http\Livewire\Admin\Domains;
 use App\Http\Livewire\Admin\EditAuthor;
 use App\Http\Livewire\Admin\EditDocument;
+use App\Http\Livewire\Admin\HomeInfo;
 use App\Http\Livewire\Admin\Login;
 use App\Http\Livewire\Admin\Orders;
 use App\Http\Livewire\Admin\PrivacyPolicy;
@@ -53,7 +54,8 @@ Route::middleware(['auth:admin'])->name('admin.')->group(function () {
     Route::get('/authors/edit-author/{author}', EditAuthor::class)->name('edit-author');
 
     Route::get('/about-us', AboutUs::class)->name('about-us');
-    Route::get('/terms-conditions', TermsConditions::class)->name('terms-conditions');
+    Route::get('/home-info', HomeInfo::class)->name('home-info');
+    Route::get('/terms-and-conditions', TermsConditions::class)->name('terms-and-conditions');
     Route::get('/privacy-policy', PrivacyPolicy::class)->name('privacy-policy');
     Route::get('/settings', Settings::class)->name('settings');
 

@@ -23,7 +23,7 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h3 class="mb-0">À propos</h3>
+                                    <h3 class="mb-0">À propos du site</h3>
                                 </div>
                             </div>
                         </div>

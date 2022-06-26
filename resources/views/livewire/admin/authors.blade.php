@@ -41,6 +41,7 @@
                                         <th scope="col" class="sort">Email</th>
                                         <th scope="col" class="sort">Numéro 1</th>
                                         <th scope="col" class="sort">Numéro 2</th>
+                                        <th scope="col" class="sort">Ajouté le</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -60,7 +61,9 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                {{ $author->name }}
+                                                <a href="{{ route('admin.edit-author', ['author' => $author->id]) }}">
+                                                    {{ $author->name }}
+                                                </a>
                                             </td>
                                             <td>
                                                 {{ $author->email ?? "/" }}
@@ -70,6 +73,9 @@
                                             </td>
                                             <td>
                                                 {{ $author->phone2 ?? "/" }}
+                                            </td>
+                                            <td>
+                                                {{ date("d-m-Y", strtotime($author->created_at)) }}
                                             </td>
                                             <td class="text-right">
                                                 <a href="{{ route('admin.edit-author', ['author' => $author ]) }}" class="btn btn-warning btn-sm"

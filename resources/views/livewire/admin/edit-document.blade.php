@@ -8,7 +8,7 @@
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="fas fa-home"></i></a></li>
                                 <li class="breadcrumb-item " aria-current="page"><a href="{{ route('admin.documents') }}">Documents</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{ $document->title }}</li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ Str::limit($document->title, 50) }}</li>
                             </ol>
                         </nav>
                     </div>
@@ -264,7 +264,7 @@
                                     <img src="{{ $photo->temporaryUrl() }}" class="img-preview">
                                 </div>
                             @endif
-                            <div class="float-right">
+                            <div class="float-right mt-2">
                                 <button type="submit" class="btn btn-primary">Modifier</button>
                                 <button type="reset" class="btn btn-outline-default">Réinitialiser</button>
                             </div>

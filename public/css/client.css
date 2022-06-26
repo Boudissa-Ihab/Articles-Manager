@@ -290,7 +290,7 @@ blockquote:before {
 }
 .header-inner {
     background: #fff;
-    height: 70px;
+    height: 120px;
     border-bottom: 1px solid #eee;
 	box-shadow: 0 15px 30px 0 #0000000f;
 }
@@ -298,12 +298,32 @@ blockquote:before {
 	float:left;
 	position:relative;
 	z-index:21;
-	height: 25px;
-	top:20px;
+	height: 100%;
+	top:5px;
 }
-.logo-holder img {
-	width: auto;
-	height:100%;
+@media only screen and (min-width: 270px) and (max-width:630px) {
+    .logo-holder {
+        top: 5px;
+        left: 10px;
+        height: 40px;
+    }
+    .logo-holder img {
+        width: auto;
+        height: 100%;
+    }
+}
+@media only screen and (min-width:631px) {
+    .logo-holder {
+        float:left;
+        position:relative;
+        z-index:21;
+        height: 120px;
+        top:5px;
+    }
+    .logo-holder img {
+        width: auto;
+        height: 80%;
+    }
 }
 .show-cart , .srf_btn , .search_btn {
 	float:right;
@@ -1134,7 +1154,7 @@ section {
     right: 0;
     bottom: 0;
     height: 70%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.99) 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);
     z-index: 10;
 }
 .hero-section_title h2{
@@ -1626,7 +1646,7 @@ section {
 }
 /*------ footer-------------------------------------------------*/
 .main-footer {
-	background: #222;
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);
 	padding: 80px 0 0;
 }
 .footer-widget-title {
@@ -1653,7 +1673,7 @@ section {
 }
 .footer-logo img {
 	width: auto;
-	height: 24px;
+	height: 100px;
 }
 .footer-social {
 	margin-top: 22px;
@@ -1693,7 +1713,7 @@ section {
 	left: 4px;
 }
 .footer-list li a {
-	color: #B6B6B6;
+	color: #d1d1d1;
 	transition: all 200ms linear;
 }
 .footer-list li a:hover {
@@ -2888,7 +2908,7 @@ section {
 	position: absolute;
 	right: 0;
 	top: 50%;
-	width: 70%;
+	width: 40%;
 	height: 1px;
 	background: #eee;
 	z-index: 1;
@@ -3351,6 +3371,12 @@ section {
 }
 .instagram-soc i {
 	color: #c862dc;
+}
+.youtube-soc i {
+	color: #ff0000;
+}
+.fa-zotero {
+    content: url("/img/brand/zotero.png");
 }
 .sb-categories_bg_item {
 	position: relative;
@@ -5334,11 +5360,6 @@ h4.cart-title span {
     right: auto;
 	left: 20px;
     top: -16px;
-}
-.logo-holder {
-	top: 16px;
-	left: 10px;
-    height: 15px;
 }
 .header-inner , .show-cart, .srf_btn, .search_btn , .nav-button-wrap{
     height: 50px;

@@ -51,7 +51,9 @@
                                                 {{ $document->id }}
                                             </td>
                                             <td>
-                                                {{ $document->title }}
+                                                <a href="{{ route('admin.edit-document', ['document' => $document->id]) }}">
+                                                    {{ Str::limit($document->title, 75) }}
+                                                </a>
                                             </td>
                                             <td>
                                                 @foreach ($document->authors as $author)

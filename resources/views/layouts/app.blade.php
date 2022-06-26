@@ -172,15 +172,19 @@
                             </a>
                             <a href="{{ route('admin.about-us') }}" class="dropdown-item">
                                 <i class="ni ni-badge"></i>
-                                <span>À propos</span>
+                                <span>À propos du site</span>
                             </a>
-                            <a href="{{ route('admin.terms-conditions') }}" class="dropdown-item">
+                            <a href="{{ route('admin.terms-and-conditions') }}" class="dropdown-item">
                                 <i class="fas fa-file-signature"></i>
                                 <span>Termes et conditions</span>
                             </a>
                             <a href="{{ route('admin.privacy-policy') }}" class="dropdown-item">
                                 <i class="fas fa-shield-alt"></i>
                                 <span>Politique de confidentialité</span>
+                            </a>
+                            <a href="{{ route('admin.home-info') }}" class="dropdown-item">
+                                <i class="fas fa-question-circle"></i>
+                                <span>Informations de l'accueil</span>
                             </a>
                             <a href="{{ route('admin.settings') }}" class="dropdown-item">
                                 <i class="ni ni-settings-gear-65"></i>

@@ -45,7 +45,12 @@
                                             @foreach ($this->contacts as $contact)
                                                 <tr>
                                                     <td></td>
-                                                    <td>{{ $contact->name }}</td>
+                                                    <td>@if ($contact->name)
+                                                            {{ $contact->name }}
+                                                        @else
+                                                            /
+                                                        @endif
+                                                    </td>
                                                     <td>{{ $contact->email }}</td>
                                                     <td>{{ Str::limit($contact->message, 35) }}</td>
                                                     <td>{{ $contact->created_at }}</td>
@@ -76,7 +81,9 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="contact-name">{{ $this->contact->name ?? "" }} : {{ $this->contact->email ?? "" }}</h4>
+                    <h4 class="modal-title" id="contact-name">
+                        {{ $this->contact->email ?? "" }}
+                    </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
