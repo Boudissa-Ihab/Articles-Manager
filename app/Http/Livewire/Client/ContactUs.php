@@ -16,14 +16,12 @@ class ContactUs extends Component
     public function rules()
     {
         return [
-            'name' => 'required|string',
             'email' => 'required|email',
             'message' => 'required|string'
         ];
     }
 
     protected $messages = [
-        'name.required' => "Le nom ne peut pas être vide",
         'email.required' => "L'adresse mail ne peut pas être vide",
         'email.email' => "Veuillez entrer une adresse mail valide",
         'message.required' => "Le contenu du message ne peut pas être vide"
@@ -41,8 +39,8 @@ class ContactUs extends Component
                 DB::transaction(function () {
                     Message::create([
                         'name' => $this->name ?? "",
-                        'email' => $this->email ?? "",
-                        'message' => $this->message ?? ""
+                        'email' => $this->email,
+                        'message' => $this->message
                     ]);
                     session()->flash("success", "Message envoyé avec succès");
                     return redirect()->route('contact-us');

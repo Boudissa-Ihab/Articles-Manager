@@ -97,6 +97,30 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="youtube_url" class="form-control-label">Youtube</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend ">
+                                                <span class="input-group-text" style="color:  #ff0000">
+                                                    <i class="fab fa-youtube fa-lg"></i></span>
+                                            </div>
+                                            <input wire:model.lazy="youtube" class="form-control" type="url"
+                                                id="youtube_url" name="youtube_url" placeholder="Youtube URL">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="zotero_url" class="form-control-label">Zotero</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <img src="{{ asset('img/brand/zotero.png') }}" style="width: 16px; height: 16px;">
+                                            </div>
+                                            <input wire:model.lazy="zotero" class="form-control" type="url"
+                                                id="zotero_url" name="zotero_url" placeholder="Zotero URL">
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">

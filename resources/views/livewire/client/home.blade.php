@@ -121,6 +121,14 @@
                                         <i class="fab fa-linkedin"></i>
                                         <span class="soc-widget_counter">Linkedin</span>
                                     </a>
+                                    <a href="@setting('youtube_link')" target="_blank" class="youtube-soc">
+                                        <i class="fab fa-youtube"></i>
+                                        <span class="soc-widget_counter">Youtube</span>
+                                    </a>
+                                    <a href="@setting('zotero_link')" target="_blank">
+                                        <i class="fab fa-zotero"></i>
+                                        <span class="soc-widget_counter">Zotero</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>

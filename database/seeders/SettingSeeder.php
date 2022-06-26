@@ -58,6 +58,22 @@ class SettingSeeder extends Seeder
             [
                 'key' => 'linkedin_link',
                 'value' => '',
+            ],
+            [
+                'key' => 'youtube_link',
+                'value' => '',
+            ],
+            [
+                'key' => 'zotero_link',
+                'value' => '',
+            ],
+            [
+                'key' => 'association',
+                'value' => '',
+            ],
+            [
+                'key' => 'organization',
+                'value' => '',
             ]
         ]);
     }

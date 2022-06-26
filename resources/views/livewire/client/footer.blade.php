@@ -8,7 +8,7 @@
                     <div class="col-md-4">
                         <div class="footer-widget">
                             <div class="footer-widget-content">
-                                <a href="{{ route('home') }}" class="footer-logo"><img src="{{ asset('img/brand/logo.png') }}" alt=""></a>
+                                <a href="{{ route('home') }}" class="footer-logo"><img src="{{ asset('img/brand/logo-white.png') }}" alt=""></a>
                                 <p>@setting('description')</p>
                                 <div class="footer-social fl-wrap">
                                     <ul>
@@ -16,6 +16,10 @@
                                         <li><a href="@setting('twitter_link')" target="_blank"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="@setting('instagram_link')" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                         <li><a href="@setting('linkedin_link')" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                        <li><a href="@setting('youtube_link')" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                        <li><a href="@setting('zotero_link')" target="_blank">
+                                            <img src="{{ asset('img/brand/zotero.png') }}" style="width: 16px; height: 16px;" alt="Zotero"></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -50,8 +54,8 @@
                                         <li> <a href="{{ route('home') }}">Accueil</a></li>
                                         <li> <a href="{{ route('about-us') }}">À propos</a></li>
                                         <li> <a href="{{ route('contact-us') }}">Contactez-nous</a></li>
-                                        <li> <a href="{{ route('terms-and-conditions') }}">Termes et conditions</a></li>
-                                        <li> <a href="{{ route('privacy-policy') }}">Politique de confidentialité</a></li>
+                                        <li> <a href="{{ route('editor', ['editor' => "terms-and-conditions"]) }}">Termes et conditions</a></li>
+                                        <li> <a href="{{ route('editor', ['editor' => "privacy-policy"]) }}">Politique de confidentialité</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -88,8 +92,8 @@
                 <div class="to-top"> <i class="fas fa-caret-up"></i></div>
                 <div class="subfooter-nav">
                     <ul>
-                        <li><a href="{{ route('terms-and-conditions') }}">Termes et conditions</a></li>
-                        <li><a href="{{ route('privacy-policy') }}">Politique de confidentialité</a></li>
+                        <li><a href="{{ route('editor', ['editor' => "terms-and-conditions"]) }}">Termes et conditions</a></li>
+                        <li><a href="{{ route('editor', ['editor' => "privacy-policy"]) }}">Politique de confidentialité</a></li>
                     </ul>
                 </div>
             </div>

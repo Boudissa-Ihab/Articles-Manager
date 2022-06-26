@@ -20,6 +20,8 @@ class Settings extends Component
     public $instagram;
     public $twitter;
     public $linkedin;
+    public $youtube;
+    public $zotero;
     public $temporaryLogo;
     const FOLDER = "logo/";
 
@@ -32,6 +34,8 @@ class Settings extends Component
         $this->instagram = setting('instagram_link') ?? "";
         $this->twitter = setting('twitter_link') ?? "";
         $this->linkedin = setting('linkedin_link') ?? "";
+        $this->youtube = setting('youtube_link') ?? "";
+        $this->zotero = setting('zotero_link') ?? "";
         $this->temporaryLogo = setting('logo');
     }
 
@@ -45,7 +49,9 @@ class Settings extends Component
                 'facebook_link' => $this->facebook ?? "",
                 'instagram_link' => $this->instagram ?? "",
                 'twitter_link' => $this->twitter ?? "",
-                'linkedin_link' => $this->linkedin ?? ""
+                'linkedin_link' => $this->linkedin ?? "",
+                'youtube_link' => $this->youtube ?? "",
+                'zotero_link' => $this->zotero ?? ""
             ]);
             if($this->logo)
             {
@@ -56,8 +62,8 @@ class Settings extends Component
             }
             setting()->save();
 
-            alert()->success("Paramètre enregistrés avec succès");
-            return redirect()->route('admin.dashboard');
+            alert()->success("Paramètres enregistrés avec succès");
+            return redirect()->route('admin.settings');
         } catch(Throwable $th) {
             alert()->error("Une erreur est survenue lors de l'enregistrement des paramètres");
         }
