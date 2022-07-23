@@ -1,7 +1,7 @@
 <div>
     <section class="hero-section error-section">
         <div class="bg-wrap hero-section_bg">
-            <div class="bg" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);"></div>
+            <div class="bg" style="background: rgba(42,104,146,1);"></div>
         </div>
         <div class="container">
             <div class="error-wrap">

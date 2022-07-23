@@ -1,7 +1,7 @@
 <div>
     <header class="main-header">
         <!-- top bar -->
-        <div class="top-bar fl-wrap">
+        {{-- <div class="top-bar fl-wrap">
             <div class="container">
                 <div class="date-holder">
                     <span class="date_num"></span>
@@ -33,12 +33,13 @@
                     </a></li>
                 </ul>
             </div>
-        </div>
+        </div> --}}
         <!-- top bar end -->
         <div class="header-inner fl-wrap">
             <div class="container">
                 <!-- logo holder  -->
                 <a href="{{ route('home') }}" class="logo-holder"><img src="{{ asset('img/brand/logo.png') }}" alt="Logo PECAN"></a>
+                <a href="{{ route('home') }}" class="logo-text-holder"><img src="{{ asset('img/brand/logo-text.png') }}" alt="Logo PECAN"></a>
                 <!-- logo holder end -->
                 <div class="search_btn htact show_search-btn"><i class="fas fa-search"></i> <span class="header-tooltip">Rechercher</span></div>
 
@@ -120,20 +121,22 @@
                     <nav>
                         <ul>
                             <li>
-                                <a href="javascript:void(0)">Accueil<i class="fas fa-caret-down"></i></a>
-                                <ul>
-                                    <li><a href="{{ route('editor', ['editor' => "association"]) }}">Association</a></li>
+                                <a href="{{ route('home') }}">Accueil{{-- <i class="fas fa-caret-down"></i> --}}</a>
+                                {{-- <ul>
                                     <li><a href="{{ route('editor', ['editor' => "organization"]) }}">Organisation</a></li>
-                                </ul>
+                                </ul> --}}
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="{{ route('domains') }}" class="{{ Request::is('domains/*') || Request::is('domains') ? 'act-link' : '' }}">Domaines</a>
-                            </li>
+                            </li> --}}
                             <li>
-                                <a href="{{ route('documents') }}" class="{{ Request::is('documents/*') || Request::is('documents') ? 'act-link' : '' }}">Articles</a>
+                                <a href="{{ route('documents') }}" class="{{ Request::is('documents/*') || Request::is('documents') ? 'act-link' : '' }}">Publications</a>
                             </li>
                             <li>
                                 <a href="{{ route('authors') }}" class="{{ Request::is('authors/*') || Request::is('authors') ? 'act-link' : '' }}">Auteurs</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('editor', ['editor' => "association"]) }}">Association</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)" class="{{ Request::is('about-us') || Request::is('contact-us')

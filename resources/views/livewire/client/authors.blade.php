@@ -1,7 +1,7 @@
 <div>
     <section class="hero-section">
         <div class="bg-wrap hero-section_bg">
-            <div class="bg" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);"></div>
+            <div class="bg" style="background: rgba(42,104,146,1);"></div>
         </div>
         <div class="container">
             <div class="hero-section_title">
@@ -27,7 +27,7 @@
                 <div class="col-md-8">
                     <div class="main-container fl-wrap fix-container-init">
                         <div class="section-title">
-                            <h2>Liste des auteurs d'articles</h2>
+                            <h2>Auteurs</h2>
                             <h4>Cliquez sur un auteur pour voir ses articles</h4>
                             <div class="steader_opt steader_opt_abs" wire:ignore>
                                 <select wire:model="filter" id="list" class="style-select no-search-select">

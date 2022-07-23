@@ -1,7 +1,7 @@
 <div>
     <section class="hero-section">
         <div class="bg-wrap hero-section_bg">
-            <div class="bg" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);"></div>
+            <div class="bg" style="background: rgba(42,104,146,1);"></div>
         </div>
         <div class="container">
             <div class="hero-section_title">
@@ -30,7 +30,7 @@
                     <ul class="contacts-list fl-wrap">
                         <li><span><i class="fas fa-map-marker"></i> Adresse :</span> <a href="">USA 27TH Brooklyn NY</a></li>
                         <li><span><i class="fas fa-phone"></i> Numéro de téléphone :</span> <a href="">+7(123)987654</a></li>
-                        <li><span><i class="fas fa-envelope"></i> Email :</span> <a href="">example@domain.com</a></li>
+                        <li><span><i class="fas fa-envelope"></i> Email :</span> <a href="">@setting('email')</a></li>
                     </ul>
                     <!--card-item end -->
                     <div class="contact-social fl-wrap">
@@ -103,7 +103,6 @@
                                 <button type="submit" class="btn color-bg float-btn" id="submit">Envoyer<i class="fas fa-caret-right"></i></button>
                             </form>
                         </div>
-                        <!-- contact form  end-->
                     </div>
                 </div>
             </div>

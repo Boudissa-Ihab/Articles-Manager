@@ -1,7 +1,6 @@
 <div>
     <div class="hero-slider-wrap fl-wrap">
         @if(count($this->slides))
-            <!-- hero-slider-container  -->
             <div class="hero-slider-container multi-slider fl-wrap full-height">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -29,15 +28,13 @@
                 <div class="fs-slider_btn color-bg fs-slider-button-prev"><i class="fas fa-caret-left"></i></div>
                 <div class="fs-slider_btn color-bg fs-slider-button-next"><i class="fas fa-caret-right"></i></div>
             </div>
-            <!-- hero-slider-container  end   -->
-            <!-- hero-slider_controls-wrap   -->
+
             <div class="hero-slider_controls-wrap">
                 <div class="container">
                     <div class="hero-slider_controls-list multi-slider_control">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 @foreach($this->slides as $slide)
-                                    <!-- swiper-slide  -->
                                     <div class="swiper-slide">
                                         <div class="hsc-list_item fl-wrap">
                                             <div class="hsc-list_item-media">
@@ -51,7 +48,6 @@
                                             </div> --}}
                                         </div>
                                     </div>
-                                    <!-- swiper-slide end -->
                                 @endforeach
                             </div>
                         </div>
@@ -59,7 +55,6 @@
                     <div class="multi-pag"></div>
                 </div>
             </div>
-            <!-- hero-slider_controls-wrap end  -->
             <div class="slider-progress-bar act-slider">
                 <span>
                     <svg class="circ" width="30" height="30">
@@ -72,7 +67,6 @@
             <div class="hero-slider-container multi-slider fl-wrap full-height">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <!-- swiper-slide -->
                         <div class="swiper-slide">
                             <div class="bg-wrap">
                                 <div class="bg" data-bg="{{ asset('img/client/slider-placeholder.jpg') }}" data-swiper-parallax="40%"></div>
@@ -90,7 +84,6 @@
                                 </div>
                             </div> --}}
                         </div>
-                        <!-- swiper-slide end -->
                     </div>
                 </div>
             </div>

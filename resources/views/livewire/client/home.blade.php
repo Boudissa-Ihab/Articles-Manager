@@ -2,6 +2,7 @@
 
     @livewire('client.slider')
 
+    {{--
     <section>
         <div class="container">
             <div class="row">
@@ -24,19 +25,18 @@
                                         <div class="picker-wrap fl-wrap">
                                             <div class="list-post-wrap fl-wrap">
                                                 @foreach($this->documents as $document)
-                                                    <!--list-post-->
                                                     <div class="list-post fl-wrap">
                                                         <div class="list-post-content" style="width: 100% !important;">
                                                             @foreach($document->domains as $domain)
                                                                 <a class="post-category-marker" style="margin-right: 6px;" href="{{ route('domains.domain', ['domain' => $domain]) }}">{{ $domain->name }}</a>
                                                             @endforeach
                                                             <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
-                                                            {{-- <span class="post-date"><i class="fas fa-clock"></i> 18 may 2022</span> --}}
+                                                            <span class="post-date"><i class="fas fa-clock"></i> 18 may 2022</span>
                                                             <p>{{ Str::limit($document->description, 120) }}</p>
-                                                            {{-- <ul class="post-opt">
+                                                            <ul class="post-opt">
                                                                 <li><i class="fas fa-comments"></i> 6 </li>
                                                                 <li><i class="fas fa-eye"></i>  587 </li>
-                                                            </ul> --}}
+                                                            </ul>
                                                             <div class="author-link" style="margin-bottom: 5px;">
                                                                 @foreach($document->authors as $author)
                                                                     <a href="{{ route('authors.author', ['author' => $author]) }}"><span>{{ $author->name }}</span></a>
@@ -44,7 +44,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!--list-post end-->
                                                 @endforeach
                                             </div>
                                         </div>
@@ -58,21 +57,20 @@
                     <div class="limit-box"></div>
                 </div>
 
-                <!-- AD -->
-                {{-- <div class="content-banner-wrap cbw_mar">
+                <!-- AD
+                <div class="content-banner-wrap cbw_mar">
                     <img src="{{ asset('img/client/all/banner.jpg') }}" class="respimg" alt="">
-                </div> --}}
-                <!-- AD end -->
+                </div>
+                AD end -->
 
                 <div class="col-md-4">
-                    <!-- sidebar   -->
                     <div class="sidebar-content fl-wrap fix-bar">
 
                         @livewire('client.components.new-featured-documents')
 
                         @livewire('client.components.domains-list')
 
-                        {{-- <div class="box-widget fl-wrap">
+                        <!-- <div class="box-widget fl-wrap">
                             <div class="widget-title">Follow Us</div>
                             <div class="box-widget-content">
                                 <div class="social-widget">
@@ -98,10 +96,9 @@
                                     </a>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div> -->
 
-                        <!-- box-widget -->
-                        <div class="box-widget fl-wrap">
+                        <!-- <div class="box-widget fl-wrap">
                             <div class="widget-title">Nous suivre sur</div>
                             <div class="box-widget-content">
                                 <div class="social-widget">
@@ -131,23 +128,147 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <!-- box-widget  end -->
+                        </div> -->
                     </div>
-                    <!-- sidebar  end -->
                 </div>
             </div>
             <div class="limit-box fl-wrap"></div>
         </div>
     </section>
-    <!-- section end -->
+    --}}
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title sect_dec">
+                        <h2>Organisation</h2>
+                    </div>
+                    <div class="col-md-4">
+                        <p style="text-align:center"><span style="color:#c0392b"><span style="font-size:24px"><u><em>Directeur de la revue</em></u></span></span></p>
+                        <ul>
+                            <li><span style="font-size:16px">Iddir Amara</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <p style="text-align:center"><span style="color:#c0392b"><span style="font-size:24px"><u><em>Comit&eacute; &eacute;ditorial</em></u></span></span></p>
+                        <ul>
+                            <li><span style="font-size:16px">Salah Abdessadok</span></li>
+                            <li><span style="font-size:16px">Kamel Amri</span></li>
+                            <li><span style="font-size:16px">Hassan Aouragh</span></li>
+                            <li><span style="font-size:16px">Khoukha Ayati</span></li>
+                            <li><span style="font-size:16px">Ilhem Bentaleb</span></li>
+                            <li><span style="font-size:16px">Hayette Berkani</span></li>
+                            <li><span style="font-size:16px">Alejandra Calder</span><span style="font-size:12px">&Oacute;</span><span style="font-size:16px">n Ord&eacute;&ntilde;ez</span></li>
+                            <li><span style="font-size:16px">Yasmina Cha</span>&Iuml;<span style="font-size:16px">d-Saoudi</span></li>
+                            <li><span style="font-size:16px">Amel Chakroun</span></li>
+                            <li><span style="font-size:16px">Rosa Fregel</span></li>
+                            <li><span style="font-size:16px">Gwenaelle Goude</span></li>
+                            <li><span style="font-size:16px">Sonia Hajri</span></li>
+                            <li><span style="font-size:16px">Farid Ighilahriz</span></li>
+                            <li><span style="font-size:16px">Giulio Lucarini</span></li>
+                            <li><span style="font-size:16px">Hajer Mejri</span></li>
+                            <li><span style="font-size:16px">Djouher Oubraham</span></li>
+                            <li><span style="font-size:16px">Thomas Perrin</span></li>
+                            <li><span style="font-size:16px">Kahina Roumane</span></li>
+                            <li><span style="font-size:16px">Isabelle Sid&eacute;ra</span></li>
+                            <li><span style="font-size:16px">Daniela Zampetti</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <p style="text-align:center"><span style="color:#c0392b"><span style="font-size:24px"><u><em>Comit&eacute; scientifique</em></u></span></span></p>
+                        <ul>
+                            <li><span style="font-size:16px">Yves Coppens ✟ (Pr&eacute;sident d&#39;honneur)</span></li>
+                            <li><span style="font-size:16px">Mathilda Arnay de La Rosa</span></li>
+                            <li><span style="font-size:16px">Barbara Barich.</span></li>
+                            <li><span style="font-size:16px">Larbi Boudad</span></li>
+                            <li><span style="font-size:16px">Rachid Hamdidouche</span></li>
+                            <li><span style="font-size:16px">Estelle Herrscher</span></li>
+                            <li><span style="font-size:16px">Mohamed Raouf Karray</span></li>
+                            <li><span style="font-size:16px">David Lubell</span></li>
+                            <li><span style="font-size:16px">Said Maouche</span></li>
+                            <li><span style="font-size:16px">George Onrubio Pintado</span></li>
+                            <li><span style="font-size:16px">Pierre Vermeersch</span></li>
+                        </ul>
+                    </div>
+                    {{-- @if(count($this->documents))
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="picker-wrap-container fl-wrap">
+                                    <div class="picker-wrap-controls">
+                                        <ul class="fl-wrap">
+                                            <li><span class="pwc_up"><i class="fas fa-caret-up"></i></span></li>
+                                            <li><span class="pwc_pause"><i class="fas fa-pause"></i></span></li>
+                                            <li><span class="pwc_down"><i class="fas fa-caret-down"></i></span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="picker-wrap fl-wrap">
+                                        <div class="list-post-wrap fl-wrap">
+                                            @foreach($this->documents as $document)
+                                                <div class="list-post fl-wrap">
+                                                    <div class="list-post-content" style="width: 100% !important;">
+                                                        @foreach($document->domains as $domain)
+                                                            <a class="post-category-marker" style="margin-right: 6px;" href="{{ route('domains.domain', ['domain' => $domain]) }}">{{ $domain->name }}</a>
+                                                        @endforeach
+                                                        <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
+                                                        <p>{{ Str::limit($document->description, 120) }}</p>
+                                                        <div class="author-link" style="margin-bottom: 5px;">
+                                                            @foreach($document->authors as $author)
+                                                                <a href="{{ route('authors.author', ['author' => $author]) }}"><span>{{ $author->name }}</span></a>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="controls-limit fl-wrap"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="{{ route('documents') }}" class="dark-btn fl-wrap">Voir plus</a>
+                    @endif --}}
+                    <div class="limit-box"></div>
+                </div>
+                <p style="text-align:right"><strong>
+                    <u>
+                        <span style="font-size:16px">Editeur &quot;Starbook agency&quot;</span>
+                    </u>
+                </strong></p>
+            </div>
+
+            <div class="limit-box fl-wrap"></div>
+
+            <div class="row" style="margin-top: 70px;">
+                <div class="col-md-12">
+                    <div class="section-title sect_dec">
+                        <h2>Recommandation des auteurs</h2>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="limit-box fl-wrap"></div>
+
+            <div class="row" style="margin-top: 70px;">
+                <div class="col-md-12">
+                    <div class="section-title sect_dec">
+                        <h2>Politique éditoriale</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- section -->
     <section class="no-padding">
         <div class="fs-carousel-wrap">
             <div class="fs-carousel-wrap_title">
                 <div class="fs-carousel-wrap_title-wrap fl-wrap">
-                    <h4>Dernier article de chaque domaine de recherche</h4>
+                    <h4>Derniers documents ajoutés</h4>
                     <h5>Ne ratez pas les nouveautés</h5>
                 </div>
                 <div class="abs_bg"></div>

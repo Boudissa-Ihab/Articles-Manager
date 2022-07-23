@@ -162,7 +162,7 @@ blockquote:before {
 	-webkit-transform: translate3d(0,0,0);
 }
 .top-bar {
-    background: #292929;
+    background: rgba(42,104,146,1);
     height: 70px;
     overflow: hidden;
     transition: all .2s ease-in-out;
@@ -244,7 +244,7 @@ blockquote:before {
 	position: absolute;
 	top: 0;
 	height: 100%;
-	background: #222;
+	background: rgb(13, 67, 104);
 	left: 130px;
 	right: 50px;
 }
@@ -257,7 +257,7 @@ blockquote:before {
 	padding: 0 15px 0 30px;
 }
 .header_news-ticker-wrap li a {
-	color: #fff;
+	color: rgb(255, 255, 255);
 }
 .hnt_title {
 	position: absolute;
@@ -290,7 +290,7 @@ blockquote:before {
 }
 .header-inner {
     background: #fff;
-    height: 120px;
+    height: 125px;
     border-bottom: 1px solid #eee;
 	box-shadow: 0 15px 30px 0 #0000000f;
 }
@@ -299,12 +299,13 @@ blockquote:before {
 	position:relative;
 	z-index:21;
 	height: 100%;
-	top:5px;
+	top: 5px;
+    left: -40px;
 }
 @media only screen and (min-width: 270px) and (max-width:630px) {
     .logo-holder {
         top: 5px;
-        left: 10px;
+        left: 5px;
         height: 40px;
     }
     .logo-holder img {
@@ -312,17 +313,73 @@ blockquote:before {
         height: 100%;
     }
 }
-@media only screen and (min-width:631px) {
+@media only screen and (min-width: 631px) and (max-width: 755px) {
+    .logo-holder {
+        top: 25px;
+        left: -20px;
+        height: 75px;
+    }
+    .logo-holder img {
+        width: auto;
+        height: 100%;
+    }
+}
+@media only screen and (min-width: 756px) {
     .logo-holder {
         float:left;
         position:relative;
         z-index:21;
-        height: 120px;
+        height: 140px;
         top:5px;
     }
     .logo-holder img {
         width: auto;
         height: 80%;
+    }
+}
+
+.logo-text-holder {
+	float:left;
+	position:relative;
+	z-index:21;
+	height: 50%;
+	top: 5px;
+    left: -40px;
+}
+@media only screen and (min-width: 270px) and (max-width:630px) {
+    .logo-text-holder {
+        top: 5px;
+        left: 1px;
+        height: 40px;
+    }
+    .logo-text-holder img {
+        width: auto;
+        height: 100%;
+    }
+}
+@media only screen and (min-width: 631px) and (max-width: 755px) {
+    .logo-text-holder {
+        left: -30px;
+        z-index:21;
+        height: 65px;
+        top: 30px;
+    }
+    .logo-text-holder img {
+        width: auto;
+        height: 100%;
+    }
+}
+@media only screen and (min-width:756px) {
+    .logo-text-holder {
+        float:left;
+        position:relative;
+        z-index:21;
+        height: 70px;
+        top: 35px;
+    }
+    .logo-text-holder img {
+        width: auto;
+        height: 100%;
     }
 }
 .show-cart , .srf_btn , .search_btn {
@@ -673,7 +730,7 @@ blockquote:before {
 .nav-holder nav li{
 	float:left;
 	position:relative;
-	margin-right:6px;
+	margin-right:5px;
 	height:50px;
 }
 .nav-holder nav li ul {
@@ -714,7 +771,7 @@ blockquote:before {
 }
 .nav-holder nav li a {
 	float: left;
-	padding: 5px 11px;
+	padding: 5px 10px;
     color: #222;
     font-size: 11px;
     font-weight: 700;
@@ -745,9 +802,19 @@ blockquote:before {
 	display:none;
 }
 /* ------Hero content------------------------------------------------------------ */
-.hero-slider-wrap   {
-	overflow: hidden;
-	height: 650px;
+@media only screen and (min-width: 270px) and (max-width:630px) {
+    .hero-slider-wrap {
+        overflow: hidden;
+        height: 450px;
+        margin-top: -70px;
+    }
+}
+@media only screen and (min-width:631px) {
+    .hero-slider-wrap {
+        overflow: hidden;
+        height: 450px;
+        margin-top: -15px;
+    }
 }
 .hero-carousel-wrap {
 	background: #111;
@@ -1154,7 +1221,7 @@ section {
     right: 0;
     bottom: 0;
     height: 70%;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);
+    background: rgba(42,104,146,1);
     z-index: 10;
 }
 .hero-section_title h2{
@@ -1646,7 +1713,7 @@ section {
 }
 /*------ footer-------------------------------------------------*/
 .main-footer {
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,104,146,1) 60%, rgba(42,104,146,1) 100%);
+	background: rgba(42,104,146,1);
 	padding: 80px 0 0;
 }
 .footer-widget-title {
@@ -3528,7 +3595,7 @@ section {
 	width: 50%;
 }
 .tabs-widget .tabs-menu li a {
-	background: #222;
+	background: rgba(42,104,146,1);
 	box-sizing: border-box;
 	display: block;
 	padding: 15px 0;
