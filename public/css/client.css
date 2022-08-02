@@ -348,25 +348,23 @@ blockquote:before {
 }
 @media only screen and (min-width: 270px) and (max-width:630px) {
     .logo-text-holder {
-        top: 5px;
-        left: 1px;
-        height: 40px;
+        left: 5px;
+        top: -25px;
     }
     .logo-text-holder img {
-        width: auto;
-        height: 100%;
+        width: 200px;
+        height: 100px;
     }
 }
 @media only screen and (min-width: 631px) and (max-width: 755px) {
     .logo-text-holder {
-        left: -30px;
+        left: -20px;
         z-index:21;
-        height: 65px;
-        top: 30px;
+        top: -10px;
     }
     .logo-text-holder img {
-        width: auto;
-        height: 100%;
+        width: 300px;
+        height: 150px;
     }
 }
 @media only screen and (min-width:756px) {
@@ -374,12 +372,11 @@ blockquote:before {
         float:left;
         position:relative;
         z-index:21;
-        height: 70px;
-        top: 35px;
+        top: -25px;
     }
     .logo-text-holder img {
-        width: auto;
-        height: 100%;
+        width: 340px;
+        height: 170px;
     }
 }
 .show-cart , .srf_btn , .search_btn {
@@ -1740,7 +1737,7 @@ section {
 }
 .footer-logo img {
 	width: auto;
-	height: 100px;
+	height: 150px;
 }
 .footer-social {
 	margin-top: 22px;
