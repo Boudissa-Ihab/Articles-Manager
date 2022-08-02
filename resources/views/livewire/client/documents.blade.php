@@ -61,7 +61,7 @@
                                     @endif
                                     <div class="grid-post-content">
                                         <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
-                                        <p>{{ Str::limit($document->description, 100) }}</p>
+                                        {{-- <p>{{ Str::limit($document->description, 100) }}</p> --}}
                                     </div>
                                     <div class="grid-post-footer">
                                         <div class="author-link">

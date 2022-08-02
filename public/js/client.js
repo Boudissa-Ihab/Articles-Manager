@@ -38,14 +38,14 @@ function initGmag() {
 
     });
     var maxL = 42;
-    $(".grid-post-content h3 a").each(function (i, div) {
+    /* $(".grid-post-content h3 a").each(function (i, div) {
         var text = $(div).text();
         if (text.length > maxL) {
             var begin = text.substr(0, maxL),
                 end = text.substr(maxL);
             $(div).html(begin).append($('<div class="hidden" />').html(end));
         }
-    });
+    }); */
     var maxLp = 90;
     $(".grid-post-content p").each(function (i, div) {
         var textp = $(div).text();

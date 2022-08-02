@@ -31,25 +31,24 @@
                             <div class="row">
                                 <div class="col-md-7">
                                     <h2>{{ $document->title }}{{-- <span>Sale -30%</span> --}}</h2>
-                                    <div class="shop-header-title_opt">
-                                        <ul>
-                                            <li><span class="grid-item_price_item rent-price">Prix:
-                                                <strong>
-                                                    @if($document->is_free)
-                                                        Gratuit
-                                                    @else
-                                                        {{ $document->price ?? 0 }} DA
-                                                    @endif
-                                                </strong>
-                                            </span></li>
-                                            {{-- <li>
-                                                <div class="reviews_counter_wrap">
-                                                    <div class="star-rating" data-starrating="5"> </div>
-                                                    <div class="reviews_counter_wrap_text">2 reviews</div>
-                                                </div>
-                                            </li> --}}
-                                        </ul>
-                                    </div>
+
+                                    @if(!$document->is_free)
+                                        <div class="shop-header-title_opt">
+                                            <ul>
+                                                <li><span class="grid-item_price_item rent-price">
+                                                    <strong>
+                                                        Prix: {{ $document->price ?? 0 }} DA
+                                                    </strong>
+                                                </span></li>
+                                                {{-- <li>
+                                                    <div class="reviews_counter_wrap">
+                                                        <div class="star-rating" data-starrating="5"> </div>
+                                                        <div class="reviews_counter_wrap_text">2 reviews</div>
+                                                    </div>
+                                                </li> --}}
+                                            </ul>
+                                        </div>
+                                    @endif
                                     {{-- <div class="post-opt single_post-opt">
                                         <ul class="no-list-style">
                                             <li><i class="fal fa-eye"></i> <span>164</span></li>
@@ -73,8 +72,9 @@
                             <div class="single-slider-wrap fl-wrap">
                                 <div class="single-slider fl-wrap">
                                     <div class="swiper-container">
-                                        <div class="swiper-wrapper lightgallery">
-                                            <img src="{{ asset('storage/documents/' .$document->photo) }}" alt="{{ $document->title }}">
+                                        <div class="swiper-wrapper lightgallery" style="justify-content: center;">
+                                            <img src="{{ asset('storage/documents/' .$document->photo) }}"
+                                                alt="{{ $document->title }}" style="width: 50% !important; height: auto;">
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                         </div>
                         <!-- single-post-media end   -->
                         <!-- single-post-content   -->
-                        <div class="single-post-content spc_column shop_post-content  fl-wrap">
+                        <div class="single-post-content spc_column shop_post-content fl-wrap">
                             <div class="clearfix"></div>
                             <div class="single-post-content_column">
                                 <div class="share-holder ver-share fl-wrap">
