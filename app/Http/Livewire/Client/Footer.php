@@ -9,7 +9,7 @@ class Footer extends Component
 {
     public function getDomainsProperty()
     {
-        return Domain::inRandomOrder()->take(5)->get();
+        return Domain::get();
     }
 
     public function render()
