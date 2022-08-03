@@ -1,6 +1,6 @@
 <div>
     <!--section -->
-    <section class="hero-section">
+    {{-- <section class="hero-section">
         <div class="bg-wrap hero-section_bg">
             <div class="bg" style="background: rgba(42,104,146,1);"></div>
         </div>
@@ -21,7 +21,23 @@
                 <span>Faire défiler vers le bas</span>
             </div>
         </div>
-    </section>
+    </section> --}}
+    <div class="breadcrumbs-header fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-header_url">
+                <a href="{{ route('home') }}">Accueil</a>
+                <a href="{{ route('authors') }}">Auteurs</a>
+                <span>{{ $this->author->name }}</span>
+            </div>
+            <div class="scroll-down-wrap">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
+                <span>Faire défiler vers le bas</span>
+            </div>
+        </div>
+        <div class="pwh_bg"></div>
+    </div>
     <!-- section end  -->
     <!--section   -->
     <section>

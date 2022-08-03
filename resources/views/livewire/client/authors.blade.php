@@ -1,5 +1,5 @@
 <div>
-    <section class="hero-section">
+    {{-- <section class="hero-section">
         <div class="bg-wrap hero-section_bg">
             <div class="bg" style="background: rgba(42,104,146,1);"></div>
         </div>
@@ -18,7 +18,21 @@
                 <span>Faire défiler vers le bas</span>
             </div>
         </div>
-    </section>
+    </section> --}}
+    <div class="breadcrumbs-header fl-wrap">
+        <div class="container">
+            <div class="breadcrumbs-header_url">
+                <a href="{{ route('home') }}">Accueil</a> <span>Auteurs</span>
+            </div>
+            <div class="scroll-down-wrap">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
+                <span>Faire défiler vers le bas</span>
+            </div>
+        </div>
+        <div class="pwh_bg"></div>
+    </div>
     <!-- section end  -->
     <!--section   -->
     <section>
@@ -141,6 +155,32 @@
                                     <a href="@setting('zotero_link')" target="_blank">
                                         <i class="fab fa-zotero"></i>
                                         <span class="soc-widget_counter">Zotero</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://decapan.hypotheses.org/" target="_blank"
+                                        style="
+                                            float: left;
+                                            width:98%;
+                                            margin:0 2% 2% 0;
+                                            padding-top: 10px;
+                                            color: #000;
+                                            border-radius: 2px;
+                                            height: 80px;
+                                            background: #f5f5f5;
+                                            border: 1px solid #eee;
+                                            float: left;
+                                            margin: 0 0 10px 0;"
+                                        >
+                                            <i class="hypotheses"></i>
+                                            <span
+                                                style="
+                                                position: absolute;
+                                                font-weight: 600;
+                                                margin-top: 20px;
+                                                margin-left: 12px;">
+                                                DECAPAN Hypotheses
+                                            </span>
                                     </a>
                                 </div>
                             </div>
