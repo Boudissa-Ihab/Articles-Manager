@@ -18,5 +18,5 @@
     "dependencies": {
         "css-loader": "^5.2.7"
     },
-    "version": "0.0.0"
+    "version": "1.22.19"
 }
