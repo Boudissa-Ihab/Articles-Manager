@@ -7,7 +7,14 @@ use Throwable;
 
 class PrivacyPolicy extends Component
 {
+    protected $listeners = ['setContent'];
     public $privacyPolicy;
+
+    public function setContent($content)
+    {
+        $this->privacyPolicy = $content;
+        $this->save();
+    }
 
     public function save()
     {

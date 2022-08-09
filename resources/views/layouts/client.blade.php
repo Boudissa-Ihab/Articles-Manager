@@ -14,6 +14,7 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('css/plugins.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/client.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/color.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/ckeditor.css') }}">
         <!-- Alpine JS -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">

@@ -7,7 +7,14 @@ use Throwable;
 
 class TermsConditions extends Component
 {
+    protected $listeners = ['setContent'];
     public $termsConditions;
+
+    public function setContent($content)
+    {
+        $this->termsConditions = $content;
+        $this->save();
+    }
 
     public function save()
     {

@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\Author;
-use App\Rules\Name;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
@@ -23,11 +22,10 @@ class AddAuthor extends Component
     public $avatar;
     const FOLDER = "authors/";
 
-
     public function rules()
     {
         return [
-            'name' => ['required', new Name()],
+            'name' => 'required|string',
             'email' => 'nullable|email|unique:App\Models\Author,email',
             'phone1' => ['nullable', 'unique:authors,phone1', 'unique:authors,phone2', 'different:phone2'],
             'phone2' => ['nullable', 'unique:authors,phone1', 'unique:authors,phone2', 'different:phone1'],

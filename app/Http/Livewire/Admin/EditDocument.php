@@ -35,7 +35,6 @@ class EditDocument extends Component
     public $featured;
     public $path;
     public $photo;
-    public $temporaryTitle;
     public $temporaryPath;
     public $temporaryPhoto;
     public $temporaryDomains = [];
@@ -102,7 +101,6 @@ class EditDocument extends Component
         $this->is_free = $this->document->is_free;
         $this->price = $this->document->price;
         $this->featured = $this->document->featured;
-        $this->temporaryTitle = $this->document->title;
         $this->temporaryPath = $this->document->path;
         $this->temporaryPhoto = $this->document->photo;
         // Add each document domain as key=value in selectDomains
@@ -207,7 +205,7 @@ class EditDocument extends Component
                     /* Saving document as PDF file */
                     if($this->path)
                     {
-                        Storage::delete(self::FOLDER .$this->temporaryTitle. '.pdf');
+                        Storage::delete(self::FOLDER .$this->temporaryPath);
                         $storeDocument = $this->path->storeAs(self::FOLDER, $document->title .'.pdf');
                         if($storeDocument)
                             $document->path = $document->title. '.pdf';
@@ -216,7 +214,7 @@ class EditDocument extends Component
 
                     if($this->photo)
                     {
-                        Storage::delete(self::FOLDER .$this->temporaryTitle. '.webp');
+                        Storage::delete(self::FOLDER .$this->temporaryPhoto);
                         $webpImage = Image::make($this->photo)->encode('webp');
                         $storeImage = Storage::put(self::FOLDER .$document->title. '.webp', $webpImage->__toString());
                         if($storeImage)

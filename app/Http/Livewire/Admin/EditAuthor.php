@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\Author;
-use App\Rules\Name;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
@@ -28,11 +27,10 @@ class EditAuthor extends Component
                             // in order to delete the related image if changed
     const FOLDER = "authors/";
 
-
     public function rules()
     {
         return [
-            'name' => ['required', new Name()],
+            'name' => 'required|string',
             'email' => ['nullable', 'email', Rule::unique('App\Models\Author', 'email')->ignore($this->author->id)],
             'phone1' => ['nullable', Rule::unique('App\Models\Author', 'phone1')->ignore($this->author->id),
                         Rule::unique('App\Models\Author', 'phone2')->ignore($this->author->id), 'different:phone2'],

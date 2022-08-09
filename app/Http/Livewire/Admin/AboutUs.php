@@ -7,7 +7,14 @@ use Throwable;
 
 class AboutUs extends Component
 {
+    protected $listeners = ['setContent'];
     public $aboutUs;
+
+    public function setContent($content)
+    {
+        $this->aboutUs = $content;
+        $this->save();
+    }
 
     public function save()
     {

@@ -24,7 +24,7 @@
     <!-- Alpine JS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- CKeditor JS -->
-    <script src="//cdn.ckeditor.com/4.16.0/full/ckeditor.js"></script>
+    <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     @livewireStyles
@@ -80,6 +80,12 @@
                         <a class="nav-link {{ Request::is('admin/domains/*') || Request::is('admin/domains') ? 'active' : '' }}" href="{{ route('admin.domains') }}">
                             <i class="fas fa-sitemap text-primary"></i>
                             <span class="nav-link-text">Domaines</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('admin/meetings/*') || Request::is('admin/meetings') ? 'active' : '' }}" href="{{ route('admin.meetings') }}">
+                            <i class="fas fa-handshake text-primary"></i>
+                            <span class="nav-link-text">Colloques & rencontres</span>
                         </a>
                     </li>
                     <li class="nav-item">
