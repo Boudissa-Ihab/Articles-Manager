@@ -41,16 +41,15 @@
                         <h2>Contenu de section</h2>
                     </div>
                     <div class="about-wrap">
-                        <p> @if($this->section == "Association")
-                                @setting("association")
-                            @elseif($this->section == "Organisation")
-                                @setting("organization")
-                            @elseif($this->section == "Termes et conditions")
-                                @setting("terms_and_conditions")
-                            @elseif($this->section == "Politique de confidentialité")
-                                @setting("privacy_policy")
-                            @endif
-                        </p>
+                        @if($this->section == "Association")
+                            @setting("association")
+                        @elseif($this->section == "Organisation")
+                            @setting("organization")
+                        @elseif($this->section == "Termes et conditions")
+                            @setting("terms_and_conditions")
+                        @elseif($this->section == "Politique de confidentialité")
+                            @setting("privacy_policy")
+                        @endif
                     </div>
                 </div>
             </div>

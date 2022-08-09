@@ -4,6 +4,7 @@ use App\Http\Livewire\Admin\AboutUs;
 use App\Http\Livewire\Admin\AddAdmin;
 use App\Http\Livewire\Admin\AddAuthor;
 use App\Http\Livewire\Admin\AddDocument;
+use App\Http\Livewire\Admin\AddMeet;
 use App\Http\Livewire\Admin\Admins;
 use App\Http\Livewire\Admin\Authors;
 use App\Http\Livewire\Admin\ClientDetails;
@@ -14,8 +15,10 @@ use App\Http\Livewire\Admin\Documents;
 use App\Http\Livewire\Admin\Domains;
 use App\Http\Livewire\Admin\EditAuthor;
 use App\Http\Livewire\Admin\EditDocument;
+use App\Http\Livewire\Admin\EditMeet;
 use App\Http\Livewire\Admin\HomeInfo;
 use App\Http\Livewire\Admin\Login;
+use App\Http\Livewire\Admin\Meets;
 use App\Http\Livewire\Admin\Orders;
 use App\Http\Livewire\Admin\PrivacyPolicy;
 use App\Http\Livewire\Admin\Profile;
@@ -40,18 +43,29 @@ Route::get('/', Login::class)->name('admin.login');
 
 Route::middleware(['auth:admin'])->name('admin.')->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
-
     Route::get('/profile', Profile::class)->name('profile');
 
     Route::get('/orders', Orders::class)->name('orders');
-    Route::get('/documents', Documents::class)->name('documents');
-    Route::get('/documents/new-document', AddDocument::class)->name('new-document');
-    Route::get('/documents/edit-document/{document}', EditDocument::class)->name('edit-document');
+
+    Route::prefix('documents')->group(function () {
+        Route::get('/', Documents::class)->name('documents');
+        Route::get('/new-document', AddDocument::class)->name('new-document');
+        Route::get('/edit-document/{document}', EditDocument::class)->name('edit-document');
+    });
+
     Route::get('/domains', Domains::class)->name('domains');
 
-    Route::get('/authors', Authors::class)->name('authors');
-    Route::get('/authors/new-author', AddAuthor::class)->name('new-author');
-    Route::get('/authors/edit-author/{author}', EditAuthor::class)->name('edit-author');
+    Route::prefix('meetings')->group(function () {
+        Route::get('/', Meets::class)->name('meetings');
+        Route::get('/new-meeting', AddMeet::class)->name('new-meeting');
+        Route::get('/edit-meeting/{meeting}', EditMeet::class)->name('edit-meeting');
+    });
+
+    Route::prefix('authors')->group(function () {
+        Route::get('/', Authors::class)->name('authors');
+        Route::get('/new-author', AddAuthor::class)->name('new-author');
+        Route::get('/edit-author/{author}', EditAuthor::class)->name('edit-author');
+    });
 
     Route::get('/about-us', AboutUs::class)->name('about-us');
     Route::get('/home-info', HomeInfo::class)->name('home-info');
@@ -59,10 +73,15 @@ Route::middleware(['auth:admin'])->name('admin.')->group(function () {
     Route::get('/privacy-policy', PrivacyPolicy::class)->name('privacy-policy');
     Route::get('/settings', Settings::class)->name('settings');
 
-    Route::get('/clients', Clients::class)->name('clients');
-    Route::get('/clients/{client}', ClientDetails::class)->name('clients.details');
-    Route::get('/admins', Admins::class)->name('admins');
-    Route::get('/admins/create', AddAdmin::class)->name('admins.create');
+    Route::prefix('clients')->group(function () {
+        Route::get('/', Clients::class)->name('clients');
+        Route::get('/{client}', ClientDetails::class)->name('clients.details');
+    });
+
+    Route::prefix('admins')->group(function () {
+        Route::get('/', Admins::class)->name('admins');
+        Route::get('/new-admin', AddAdmin::class)->name('admins.create');
+    });
 
     Route::get('/slider', Slider::class)->name('slider');
     Route::get('/contacts', ContactUs::class)->name('contacts');

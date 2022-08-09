@@ -43,7 +43,7 @@
                                 <div class="form-group @error('email') has-danger @enderror col-md-6">
                                     <label class="form-control-label" for="input-email">Adresse Mail <sup>(optionnelle)</sup></label>
                                     <input wire:model.lazy="email" type="email" name="email" id="email"
-                                        class="form-control form-control-alternative @error('email') error-input @enderror">
+                                        class="form-control @error('email') error-input @enderror">
                                     @error('email')
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -53,9 +53,9 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group @error('phone1') has-danger @enderror col-md-6">
-                                    <label class="form-control-label" for="input-phone-1">Numéro de Téléphone 1 <sup>(optionnel)</sup></label>
+                                    <label class="form-control-label" for="phone1">Numéro de Téléphone 1 <sup>(optionnel)</sup></label>
                                     <input wire:model.lazy="phone1" type="text" name="phone1" id="phone1"
-                                        class="form-control form-control-alternative @error('phone1') error-input @enderror">
+                                        class="form-control @error('phone1') error-input @enderror">
                                     @error('phone1')
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -63,9 +63,9 @@
                                     @enderror
                                 </div>
                                 <div class="form-group @error('phone2') has-danger @enderror col-md-6">
-                                    <label class="form-control-label" for="input-phone-2">Numéro de Téléphone 2 <sup>(optionnel)</sup></label>
+                                    <label class="form-control-label" for="phone2">Numéro de Téléphone 2 <sup>(optionnel)</sup></label>
                                     <input wire:model.lazy="phone2" type="text" name="phone2" id="phone2"
-                                        class="form-control form-control-alternative @error('phone2') error-input @enderror">
+                                        class="form-control @error('phone2') error-input @enderror">
                                     @error('phone2')
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -88,7 +88,7 @@
                             {{-- <div class="form-group">
                                 <label for="keywords">Mots-clés <sup>(optionnels)</sup></label>
                                 <input wire:model.lazy="keywords" type="text" class="form-control" id="keywords" name="keywords">
-                                <span class="invalid-feedback" style="display: block;" role="alert">
+                                <span class="valid-feedback" style="display: block;" role="alert">
                                     <strong>* Veuillez séparer les mots-clés par des virgules</strong>
                                 </span>
                             </div> --}}

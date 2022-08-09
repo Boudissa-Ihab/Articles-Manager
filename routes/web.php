@@ -10,6 +10,8 @@ use App\Http\Livewire\Client\DomainDetails;
 use App\Http\Livewire\Client\Domains;
 use App\Http\Livewire\Client\Editor;
 use App\Http\Livewire\Client\Home;
+use App\Http\Livewire\Client\MeetDetails;
+use App\Http\Livewire\Client\Meets;
 use App\Http\Livewire\Client\NotFound;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -54,5 +56,8 @@ Route::get('/documents/{document}', DocumentDetails::class)->name('documents.doc
 
 Route::get('/domains', Domains::class)->name('domains');
 Route::get('/domains/{domain}', DomainDetails::class)->name('domains.domain');
+
+Route::get('/meetings', Meets::class)->name('meetings');
+Route::get('/meetings/{meeting}', MeetDetails::class)->name('meetings.meeting-details');
 
 Route::get('/not-found', NotFound::class)->name('not-found');

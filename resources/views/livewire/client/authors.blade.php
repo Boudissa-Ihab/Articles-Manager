@@ -198,11 +198,11 @@
     </section>
     <!-- section end -->
     <!-- section  -->
-    <div class="gray-bg ad-wrap fl-wrap">
+    {{-- <div class="gray-bg ad-wrap fl-wrap">
         <div class="content-banner-wrap">
             <img src="{{ asset('img/client/all/banner.jpg') }}" class="respimg" alt="">
         </div>
-    </div>
+    </div> --}}
 </div>
 
 @push('scripts')

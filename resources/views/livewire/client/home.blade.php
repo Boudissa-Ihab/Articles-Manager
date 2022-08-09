@@ -170,12 +170,19 @@
                     </div>
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <p style="text-align:center"><span style="color:#c0392b"><span
-                                    style="font-size:24px"><u><em>Directeur de la revue</em></u></span></span></p>
+                        <p style="text-align:center">
+                            <span style="color:#c0392b">
+                                <span style="font-size:24px">
+                                    <u><em>Directeur de la revue</em></u>
+                                </span>
+                            </span>
+                        </p>
                         <ul>
                             <li><span style="font-size:16px; margin-right: 3px;">Iddir Amara</span>
                                 <a href="mailto:iddir.amara@univ-alger2.dz" data-toggle="tooltip"
-                                    title="iddir.amara@univ-alger2.dz"><i class="far fa-envelope fa-lg"></i></a>
+                                    title="iddir.amara@univ-alger2.dz">
+                                    <i class="far fa-envelope fa-lg"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -187,8 +194,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-4">
-                        <p style="text-align:center"><span style="color:#c0392b"><span
-                                    style="font-size:24px"><u><em>Comit&eacute; &eacute;ditorial</em></u></span></span>
+                        <p style="text-align:center">
+                            <span style="color:#c0392b"><span style="font-size:24px">
+                                <u><em>Comit&eacute; &eacute;ditorial</em></u>
+                            </span>
+                        </span>
                         </p>
                         <ul style="line-height: 30px;">
                             <li><span style="font-size:16px; margin-right: 3px;">Salah Abdessadok</span></li>
@@ -202,14 +212,17 @@
                             <li><span style="font-size:16px; margin-right: 3px;">Ilhem Bentaleb</span></li>
                             {{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Hayette Berkani</span>
-                                <a href="mailto:tamrit@hotmail.com" data-toggle="tooltip" title="tamrit@hotmail.com"><i
-                                        class="far fa-envelope fa-lg"></i></a>
+                                <a href="mailto:tamrit@hotmail.com" data-toggle="tooltip" title="tamrit@hotmail.com">
+                                    <i class="far fa-envelope fa-lg"></i>
+                                </a>
                             </li>{{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Alejandra Calder&Oacute;n
                                     Ord&eacute;&ntilde;ez</span></li>{{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Yasmina Cha&Iuml;d-Saoudi</span>
                                 <a href="mailto:yasmina.chaid@univ-alger2.dz" data-toggle="tooltip"
-                                    title="yasmina.chaid@univ-alger2.dz"><i class="far fa-envelope fa-lg"></i></a>
+                                    title="yasmina.chaid@univ-alger2.dz">
+                                    <i class="far fa-envelope fa-lg"></i>
+                                </a>
                             </li>{{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Amel Chakroun</span>
                                 <a href="mailto:chakrounamel2@gmail.com" data-toggle="tooltip"
@@ -231,25 +244,35 @@
                             {{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Thomas Perrin</span>
                                 <a href="mailto:thomas.perrin@cnrs.fr" data-toggle="tooltip"
-                                    title="thomas.perrin@cnrs.fr"><i class="far fa-envelope fa-lg"></i></a>
+                                    title="thomas.perrin@cnrs.fr">
+                                    <i class="far fa-envelope fa-lg"></i>
+                                </a>
                             </li>{{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Kahina Roumane</span></li>
                             {{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Isabelle Sid&eacute;ra</span>
                                 <a href="mailto:isabelle.sidera@cnrs.fr" data-toggle="tooltip"
-                                    title="isabelle.sidera@cnrs.fr"><i class="far fa-envelope fa-lg"></i></a>
+                                    title="isabelle.sidera@cnrs.fr">
+                                    <i class="far fa-envelope fa-lg"></i>
+                                </a>
                             </li>{{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Daniela Zampetti</span>
                                 <a href="mailto:daniela.zampetti@fondazione.uniroma1.it" data-toggle="tooltip"
-                                    title="daniela.zampetti@fondazione.uniroma1.it"><i
-                                        class="far fa-envelope fa-lg"></i></a>
+                                    title="daniela.zampetti@fondazione.uniroma1.it">
+                                    <i class="far fa-envelope fa-lg"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <p style="text-align:center"><span style="color:#c0392b"><span
-                                    style="font-size:24px"><u><em>Comit&eacute; scientifique</em></u></span></span></p>
+                        <p style="text-align:center">
+                            <span style="color:#c0392b">
+                                <span style="font-size:24px">
+                                    <u><em>Comit&eacute; scientifique</em></u>
+                                </span>
+                            </span>
+                        </p>
                         <ul style="line-height: 30px;">
                             <li><span style="font-size:16px;">Yves Coppens ✟ (Pr&eacute;sident d&#39;honneur)</span>
                             </li>

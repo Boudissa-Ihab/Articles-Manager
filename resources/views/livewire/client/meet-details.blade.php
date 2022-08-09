@@ -1,28 +1,10 @@
 <div>
-    {{-- <section class="hero-section">
-        <div class="bg-wrap hero-section_bg">
-            <div class="bg" style="background: rgba(42,104,146,1);"></div>
-        </div>
-        <div class="container">
-            <div class="hero-section_title">
-                <h2>Domaines de recherche</h2>
-            </div>
-            <div class="clearfix"></div>
-            <div class="breadcrumbs-list fl-wrap">
-                <a href="{{ route('home') }}">Accueil</a> <span>Domaines de recherche</span>
-            </div>
-            <div class="scroll-down-wrap scw_transparent">
-                <div class="mousey">
-                    <div class="scroller"></div>
-                </div>
-                <span>Faire défiler vers le bas</span>
-            </div>
-        </div>
-    </section> --}}
     <div class="breadcrumbs-header fl-wrap">
         <div class="container">
             <div class="breadcrumbs-header_url">
-                <a href="{{ route('home') }}">Accueil</a> <span>Domaines de recherche</span>
+                <a href="{{ route('home') }}">Accueil</a>
+                <a href="{{ route('meetings') }}">Colloques & rencontres</a>
+                <span>{{ $meeting->name }}</span>
             </div>
             <div class="scroll-down-wrap">
                 <div class="mousey">
@@ -33,26 +15,58 @@
         </div>
         <div class="pwh_bg"></div>
     </div>
-    <!-- section end  -->
     <!--section   -->
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="box-widget fl-wrap">
-                        <div class="widget-title">Liste des domaines de recherche</div>
-                        <div class="box-widget-content">
-                            <div class="sb-categories_bg">
-                                @foreach ($this->domains as $domain)
-                                    <a href="{{ route('domains.domain', ['domain' => $domain]) }}" class="sb-categories_bg_item">
-                                        <div class="bg-wrap">
-                                            <div class="bg" data-bg="{{ asset('img/client/grey-background.jpg') }}"></div>
-                                            <div class="overlay"></div>
+                    <div class="main-container fl-wrap fix-container-init">
+                        <div class="single-post-header fl-wrap">
+                            <div class="clearfix"></div>
+                            <h1>{{ $meeting->name }}</h1>
+                            <div class="clearfix"></div>
+                            <span class="post-date"><i class="far fa-clock"></i>Du <b>{{ date("d-m-Y", strtotime($meeting->start_date)) }}</b> jusqu'au <b>{{ date("d-m-Y", strtotime($meeting->end_date)) }}</b></span>
+                        </div>
+
+                        <div class="single-post-media fl-wrap">
+                            <div class="single-slider-wrap fl-wrap">
+                                <div class="single-slider fl-wrap">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper lightgallery" style="justify-content: center;">
+                                            <img src="{{ asset('storage/meetings/' .$meeting->photo) }}"
+                                                alt="{{ $meeting->name }}" style="width: 50% !important; height: auto;">
                                         </div>
-                                        <div class="spb-categories_title">{{ $domain->name }}</div>
-                                        <div class="spb-categories_counter">{{ $domain->documents_count }}</div>
-                                    </a>
-                                @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- single-post-content   -->
+                        <div class="single-post-content fl-wrap">
+                            <div class="clearfix"></div>
+                            <div class="single-post-content_text" id="font_chage">
+                                <h4 class="mb_head">Description</h4>
+                                <p class="has-drop-cap">{{ $meeting->description }}</p>
+                                <br>
+                                <h4 class="mb_head">Organisé et animé par</h4>
+                                <p>{{ $meeting->hosted_by }}</p>
+                                <br>
+                                <h4 class="mb_head">Endroit de la réunion</h4>
+                                <p>{{ $meeting->place }}</p>
+                                @if($meeting->keywords != null)
+                                    <blockquote>
+                                        <p>Mots-clé : {{ $meeting->keywords }}</p>
+                                    </blockquote>
+                                @endif
+                            </div>
+                        </div>
+                        <!-- single-post-content  end   -->
+                        <div class="more-post-wrap fl-wrap">
+                            <div class="pr-subtitle prs_big">Programme</div>
+                            <div class="meeting-elements">
+                                <div class="ck-content">
+                                    {!! $meeting->program !!}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,7 +75,7 @@
                     <!-- sidebar   -->
                     <div class="sidebar-content fl-wrap fixed-bar">
                         <!-- box-widget -->
-                        <div class="box-widget fl-wrap">
+                        {{-- <div class="box-widget fl-wrap">
                             <div class="box-widget-content">
                                 <div class="search-widget fl-wrap">
                                     <form action="#">
@@ -70,10 +84,10 @@
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                        <!-- box-widget  end -->
+                        </div> --}}
 
-                        <!-- box-widget -->
+                        @livewire('client.components.domains-list')
+
                         <div class="box-widget fl-wrap">
                             <div class="widget-title">Nous suivre sur</div>
                             <div class="box-widget-content">
@@ -131,22 +145,18 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- box-widget end -->
 
                         @livewire('client.components.new-featured-documents')
 
                     </div>
-                    <!-- sidebar  end -->
                 </div>
             </div>
             <div class="limit-box fl-wrap"></div>
         </div>
     </section>
-    <!-- section end -->
-    <!-- section  -->
     {{-- <div class="gray-bg ad-wrap fl-wrap">
         <div class="content-banner-wrap">
-            <img src="{{ asset('img/client/all/banner.jpg') }}" class="respimg" alt="">
+            <img src="images/all/banner.jpg" class="respimg" alt="">
         </div>
     </div> --}}
 </div>

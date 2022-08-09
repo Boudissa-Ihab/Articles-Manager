@@ -90,11 +90,21 @@
                                     <label for="accepted_at">Accepté le</label>
                                     <input wire:model="accepted_at" type="date" name="accepted_at" id="accepted_at"
                                         class="form-control @error('accepted_at') error-input @enderror">
+                                    @error('accepted_at')
+                                        <span class="invalid-feedback" style="display: block;" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group col-xl-6 col-md-6 @error('published_at') has-danger @enderror">
                                     <label for="published_at">Publié le</label>
                                     <input wire:model="published_at" type="date" name="published_at" id="published_at"
                                         class="form-control @error('published_at') error-input @enderror">
+                                    @error('published_at')
+                                        <span class="invalid-feedback" style="display: block;" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-row">
@@ -170,7 +180,7 @@
                             <div class="form-group">
                                 <label for="keywords">Mots-clés <sup>(optionnels)</sup></label>
                                 <input wire:model.lazy="keywords" type="text" class="form-control" id="keywords" name="keywords">
-                                <span class="invalid-feedback" style="display: block;" role="alert">
+                                <span class="valid-feedback" style="display: block;" role="alert">
                                     <strong>* Veuillez séparer les mots-clés par des virgules</strong>
                                 </span>
                             </div>

@@ -48,8 +48,7 @@ blockquote p {
 	color:#494949;
 }
 blockquote:before {
-    font-family: Font Awesome\ 5 Pro;
-    content: "\f10e";
+    font-family: Font Awesome\ 5 Free;
     position: absolute;
     color: #ccc;
     bottom: 3px;
@@ -994,7 +993,7 @@ blockquote:before {
 	transition: all .3s ease-in-out;
 }
 .hsc-list_item-media:after {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 5 Free;
     content: "\f106";
     position: absolute;
     left: 50%;
@@ -1191,7 +1190,7 @@ section {
 	height: 1px;
 }
 .sect_dec:after {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 5 Free;
     content: "\f0d7";
     position: absolute;
     right: 20px;
@@ -1335,7 +1334,7 @@ section {
 	padding-left: 14px;
 }
 .breadcrumbs-list a:before , .breadcrumbs-header_url a:before , .breadcrumbs-list span:before , .breadcrumbs-header_url span:before {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 5 Free;
     content: "\f0da";
     position: absolute;
     left: 0;
@@ -1771,7 +1770,7 @@ section {
     font-weight: 600;
 }
 .footer-list li:before {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 5 Free;
     content: "\f0da";
     position: absolute;
     left: 0;
@@ -2536,7 +2535,7 @@ section {
 	margin:10px 0 0 20px;
 	position: relative;
 	text-transform: uppercase;
-	font-size: 10px;
+	font-size: 13px;
 	font-weight: 600;
 }
 .single-post-header .post-date i {
@@ -3292,12 +3291,12 @@ section {
 	padding-left: 20px;
 }
 .categories_nav-inner  a.back:before {
-	font-family: Font Awesome\ 5 Pro;
+	font-family: Font Awesome\ 5 Free;
 	content: '\f104';
 	color: #fff;
 }
 .categories_nav-inner .submen-dec:before {
-	font-family: Font Awesome\ 5 Pro;
+	font-family: Font Awesome\ 5 Free;
 	content: '\f0da';
 	position: absolute;
 	right: 20px;
@@ -3485,7 +3484,7 @@ section {
 	overflow: hidden;
 }
 .spb-categories_counter:before {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 5 Free;
     content: "\f0da";
 	position: absolute;
 	width: 36px;
@@ -3663,7 +3662,7 @@ section {
 	transition: all 200ms linear;
 }
 .post-widget-item-media a:after , .list-post-media a:after , .grid-post-media a.gpm_link:after   {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 5 Free;
     content: "\f178";
 	position: absolute;
 	left: 50%;
@@ -5020,7 +5019,7 @@ h4.cart-title span {
 	background:#292929;
 }
 .cart-totals:after {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 5 Free;
 	content:'\f83e';
 	position:absolute;
 	right:50px;
@@ -5163,7 +5162,7 @@ h4.cart-title span {
 	box-shadow: 0 5px 25px rgba(0,0,0,0.2);
 }
 .about-img-hotifer:before {
-    font-family: Font Awesome\ 5 Pro;
+    font-family: Font Awesome\ 5 Free;
     content: "\f10e";
     bottom: 30px;
     right: 20px;
@@ -5298,7 +5297,7 @@ h4.cart-title span {
 	padding-left:24px;
 }
 .menusb a.back:before{
-	font-family: Font Awesome\ 5 Pro;
+	font-family: Font Awesome\ 5 Free;
 	content: "\f0d9";
 	font-size:14px;
 }
@@ -5756,4 +5755,33 @@ button.close
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
+}
+
+.meeting-elements {
+    all: initial;
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ck-content {
+    max-width: 1300px;
+    width: 92%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.ck-content ol, .ck-content ul{
+    list-style: initial;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.ck-content strong {
+    font-weight: 700;
 }

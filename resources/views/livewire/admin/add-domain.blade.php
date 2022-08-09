@@ -30,7 +30,7 @@
                 <div class="form-group pb-2">
                     <label for="keywords">Mots-clés <sup>(optionnels)</sup></label>
                     <input wire:model.lazy="keywords" class="form-control" id="keywords" name="keywords" type="text">
-                    <span class="invalid-feedback" style="display: block;" role="alert">
+                    <span class="valid-feedback" style="display: block;" role="alert">
                         <strong>* Veuillez séparer les mots-clés par des virgules</strong>
                     </span>
                 </div>
