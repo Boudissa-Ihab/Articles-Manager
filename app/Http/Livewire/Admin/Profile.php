@@ -58,7 +58,7 @@ class Profile extends Component
     public function editInfo()
     {
         if ($this->validate([
-            'name' => ['required', new Name()],
+            'name' => ['required', 'string'],
             'email' => ['required', 'email', Rule::unique('App\Models\Admin', 'email')->ignore($this->admin->id)],
             'phone1' => ['required', Rule::unique('App\Models\Admin', 'phone1')->ignore($this->admin->id),
                         Rule::unique('App\Models\Admin', 'phone2')->ignore($this->admin->id), 'different:phone2'],

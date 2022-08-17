@@ -349,22 +349,22 @@ blockquote:before {
 @media only screen and (min-width: 270px) and (max-width:630px) {
     .logo-text-holder {
         left: 5px;
-        top: -25px;
+        top: 15px;
     }
     .logo-text-holder img {
-        width: 200px;
-        height: 100px;
+        width: 190px;
+        height: 23px;
     }
 }
 @media only screen and (min-width: 631px) and (max-width: 755px) {
     .logo-text-holder {
         left: -20px;
         z-index:21;
-        top: -10px;
+        top: 50px;
     }
     .logo-text-holder img {
-        width: 300px;
-        height: 150px;
+        width: 340px;
+        height: 38px;
     }
 }
 @media only screen and (min-width:756px) {
@@ -372,11 +372,11 @@ blockquote:before {
         float:left;
         position:relative;
         z-index:21;
-        top: -25px;
+        top: 45px;
     }
     .logo-text-holder img {
-        width: 340px;
-        height: 170px;
+        width: 360px;
+        height: 42px;
     }
 }
 .show-cart , .srf_btn , .search_btn {
@@ -5238,7 +5238,7 @@ h4.cart-title span {
 	position: absolute  ;
 	top:70px;
 	right:-20px;
-	width:300px;
+	width:280px;
 	z-index:50;
  	padding:15px 10px ;
  	background:#292929;

@@ -130,6 +130,9 @@
                                 <a href="{{ route('domains') }}" class="{{ Request::is('domains/*') || Request::is('domains') ? 'act-link' : '' }}">Domaines</a>
                             </li> --}}
                             <li>
+                                <a href="{{ route('meetings') }}" class="{{ Request::is('meetings/*') || Request::is('meetings') ? 'act-link' : '' }}">Colloques</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('documents') }}" class="{{ Request::is('documents/*') || Request::is('documents') ? 'act-link' : '' }}">Publications</a>
                             </li>
                             <li>
