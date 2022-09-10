@@ -1,41 +1,6 @@
 <div>
-    {{-- <section class="hero-section">
-        <div class="bg-wrap hero-section_bg">
-            <div class="bg" style="background: rgba(42,104,146,1);"></div>
-        </div>
-        <div class="container">
-            <div class="hero-section_title">
-                <h2>Document : {{ $document->title }}</h2>
-            </div>
-            <div class="clearfix"></div>
-            <div class="breadcrumbs-list fl-wrap">
-                <a href="{{ route('home') }}">Accueil</a>
-                <a href="{{ route('documents') }}">Documents</a>
-                <span>{{ $document->title }}</span>
-            </div>
-            <div class="scroll-down-wrap scw_transparent">
-                <div class="mousey">
-                    <div class="scroller"></div>
-                </div>
-                <span>Faire défiler vers le bas</span>
-            </div>
-        </div>
-    </section> --}}
-    <div class="breadcrumbs-header fl-wrap">
-        <div class="container">
-            <div class="breadcrumbs-header_url">
-                <a href="{{ route('home') }}">Accueil</a>
-                <a href="{{ route('documents') }}">Documents</a>
-                <span>{{ $document->title }}</span>
-            </div>
-            <div class="scroll-down-wrap">
-                <div class="mousey">
-                    <div class="scroller"></div>
-                </div>
-                <span>Faire défiler vers le bas</span>
-            </div>
-        </div>
-        <div class="pwh_bg"></div>
+    <div>
+        <img src="{{ asset('img/client/cave-background.jpg') }}" style="height: 160px; width: auto;">
     </div>
     <!--section -->
     <section>
@@ -128,17 +93,21 @@
                                                 <td>Nombre de pages</td>
                                                 <td>{{ $document->nb_pages }}</td>
                                             </tr>
-                                            <tr>
-                                                <td>Prix du document</td>
-                                                <td>@if ($document->is_free) 0
-                                                    @else {{ $document->price }}
-                                                    @endif DA
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mots-clés</td>
-                                                <td>{{ $document->keywords }}</td>
-                                            </tr>
+                                            @if(!$document->is_free)
+                                                <tr>
+                                                    <td>Prix du document</td>
+                                                    <td>@if ($document->is_free) 0
+                                                        @else {{ $document->price }}
+                                                        @endif DA
+                                                    </td>
+                                                </tr>
+                                            @endif
+                                            @if($document->keywords)
+                                                <tr>
+                                                    <td>Mots-clés</td>
+                                                    <td>{{ $document->keywords }}</td>
+                                                </tr>
+                                            @endif
                                         </tbody>
                                     </table>
                                 </div>

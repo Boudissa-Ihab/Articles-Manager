@@ -1,21 +1,8 @@
 <div>
-    <div class="breadcrumbs-header fl-wrap">
-        <div class="container">
-            <div class="breadcrumbs-header_url">
-                <a href="{{ route('home') }}">Accueil</a>
-                <a href="{{ route('meetings') }}">Colloques & rencontres</a>
-                <span>{{ $meeting->name }}</span>
-            </div>
-            <div class="scroll-down-wrap">
-                <div class="mousey">
-                    <div class="scroller"></div>
-                </div>
-                <span>Faire défiler vers le bas</span>
-            </div>
-        </div>
-        <div class="pwh_bg"></div>
+    <div>
+        <img src="{{ asset('img/client/grotte-background.jpg') }}" style="height: 160px; width: auto;">
     </div>
-    <!--section   -->
+    <!--section -->
     <section>
         <div class="container">
             <div class="row">

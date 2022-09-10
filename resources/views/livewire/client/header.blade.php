@@ -130,10 +130,7 @@
                                 <a href="{{ route('domains') }}" class="{{ Request::is('domains/*') || Request::is('domains') ? 'act-link' : '' }}">Domaines</a>
                             </li> --}}
                             <li>
-                                <a href="{{ route('meetings') }}" class="{{ Request::is('meetings/*') || Request::is('meetings') ? 'act-link' : '' }}">Colloques</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('documents') }}" class="{{ Request::is('documents/*') || Request::is('documents') ? 'act-link' : '' }}">Publications</a>
+                                <a href="{{ route('documents') }}" class="{{ Request::is('documents/*') || Request::is('documents') ? 'act-link' : '' }}">Articles</a>
                             </li>
                             <li>
                                 <a href="{{ route('authors') }}" class="{{ Request::is('authors/*') || Request::is('authors') ? 'act-link' : '' }}">Auteurs</a>
@@ -142,9 +139,11 @@
                                 <a href="{{ route('editor', ['editor' => "association"]) }}">Association</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" class="{{ Request::is('about-us') || Request::is('contact-us')
-                                || Route::is('terms-and-conditions') || Route::is('privacy-policy') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
+                                <a href="javascript:void(0)" class="{{ Request::is('meetings') || Request::is('meetings/*') || Request::is('about-us') || Request::is('contact-us') || Route::is('terms-and-conditions')
+                                    || Route::is('privacy-policy') || Request::is('domains') || Request::is('domains/*') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
                                 <ul>
+                                    <li><a href="{{ route('domains') }}">Domaines</a></li>
+                                    <li><a href="{{ route('meetings') }}">Colloques</a></li>
                                     <li><a href="{{ route('about-us') }}">À propos</a></li>
                                     <li><a href="{{ route('contact-us') }}">Contactez-nous</a></li>
                                     <li><a href="{{ route('editor', ['editor' => "terms-and-conditions"]) }}">Termes et conditions</a></li>

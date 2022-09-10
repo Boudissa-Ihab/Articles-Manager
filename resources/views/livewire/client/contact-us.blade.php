@@ -1,39 +1,7 @@
 <div>
-    {{-- <section class="hero-section">
-        <div class="bg-wrap hero-section_bg">
-            <div class="bg" style="background: rgba(42,104,146,1);"></div>
-        </div>
-        <div class="container">
-            <div class="hero-section_title">
-                <h2>Contactez-nous</h2>
-            </div>
-            <div class="clearfix"></div>
-            <div class="breadcrumbs-list fl-wrap">
-                <a href="{{ route('home') }}">Accueil</a> <span>Contactez-nous</span>
-            </div>
-            <div class="scroll-down-wrap scw_transparent">
-                <div class="mousey">
-                    <div class="scroller"></div>
-                </div>
-                <span>Faire défiler vers le bas</span>
-            </div>
-        </div>
-    </section> --}}
-    <div class="breadcrumbs-header fl-wrap">
-        <div class="container">
-            <div class="breadcrumbs-header_url">
-                <a href="{{ route('home') }}">Accueil</a> <span>Contactez-nous</span>
-            </div>
-            <div class="scroll-down-wrap">
-                <div class="mousey">
-                    <div class="scroller"></div>
-                </div>
-                <span>Faire défiler vers le bas</span>
-            </div>
-        </div>
-        <div class="pwh_bg"></div>
+    <div>
+        <img src="{{ asset('img/client/sahara-background.jpg') }}" style="height: 160px; width: auto;">
     </div>
-    <!-- section end  -->
     <!--section   -->
     <section>
         <div class="container">

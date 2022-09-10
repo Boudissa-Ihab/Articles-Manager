@@ -20,7 +20,7 @@
             </div>
         </div>
     </section> --}}
-    <div class="breadcrumbs-header fl-wrap">
+    {{-- <div class="breadcrumbs-header fl-wrap">
         <div class="container">
             <div class="breadcrumbs-header_url">
                 <a href="{{ route('home') }}">Accueil</a>
@@ -34,6 +34,9 @@
             </div>
         </div>
         <div class="pwh_bg"></div>
+    </div> --}}
+    <div>
+        <img src="{{ asset('img/client/cave-background.jpg') }}" style="height: 160px; width: auto;">
     </div>
     <!--section -->
     <section>

@@ -1,6 +1,8 @@
 <div>
 
-    @livewire('client.slider')
+    <div>
+        <img src="{{ asset('img/client/home-background.jpg') }}" style="height: 160px; width: auto;">
+    </div>
 
     {{-- <section>
         <div class="container">
@@ -211,23 +213,11 @@
                             {{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Ilhem Bentaleb</span></li>
                             {{-- <br> --}}
-                            <li><span style="font-size:16px; margin-right: 3px;">Hayette Berkani</span>
-                                <a href="mailto:tamrit@hotmail.com" data-toggle="tooltip" title="tamrit@hotmail.com">
-                                    <i class="far fa-envelope fa-lg"></i>
-                                </a>
-                            </li>{{-- <br> --}}
+                            <li><span style="font-size:16px; margin-right: 3px;">Hayette Berkani</span></li>{{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Alejandra Calder&Oacute;n
                                     Ord&eacute;&ntilde;ez</span></li>{{-- <br> --}}
-                            <li><span style="font-size:16px; margin-right: 3px;">Yasmina Cha&Iuml;d-Saoudi</span>
-                                <a href="mailto:yasmina.chaid@univ-alger2.dz" data-toggle="tooltip"
-                                    title="yasmina.chaid@univ-alger2.dz">
-                                    <i class="far fa-envelope fa-lg"></i>
-                                </a>
-                            </li>{{-- <br> --}}
-                            <li><span style="font-size:16px; margin-right: 3px;">Amel Chakroun</span>
-                                <a href="mailto:chakrounamel2@gmail.com" data-toggle="tooltip"
-                                    title="chakrounamel2@gmail.com"><i class="far fa-envelope fa-lg"></i></a>
-                            </li>{{-- <br> --}}
+                            <li><span style="font-size:16px; margin-right: 3px;">Yasmina Cha&Iuml;d-Saoudi</span></li>{{-- <br> --}}
+                            <li><span style="font-size:16px; margin-right: 3px;">Amel Chakroun</span></li>{{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Rosa Fregel</span></li>
                             {{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Gwenaelle Goude</span></li>
@@ -242,26 +232,11 @@
                             {{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Djouher Oubraham</span></li>
                             {{-- <br> --}}
-                            <li><span style="font-size:16px; margin-right: 3px;">Thomas Perrin</span>
-                                <a href="mailto:thomas.perrin@cnrs.fr" data-toggle="tooltip"
-                                    title="thomas.perrin@cnrs.fr">
-                                    <i class="far fa-envelope fa-lg"></i>
-                                </a>
-                            </li>{{-- <br> --}}
+                            <li><span style="font-size:16px; margin-right: 3px;">Thomas Perrin</span></li>{{-- <br> --}}
                             <li><span style="font-size:16px; margin-right: 3px;">Kahina Roumane</span></li>
                             {{-- <br> --}}
-                            <li><span style="font-size:16px; margin-right: 3px;">Isabelle Sid&eacute;ra</span>
-                                <a href="mailto:isabelle.sidera@cnrs.fr" data-toggle="tooltip"
-                                    title="isabelle.sidera@cnrs.fr">
-                                    <i class="far fa-envelope fa-lg"></i>
-                                </a>
-                            </li>{{-- <br> --}}
-                            <li><span style="font-size:16px; margin-right: 3px;">Daniela Zampetti</span>
-                                <a href="mailto:daniela.zampetti@fondazione.uniroma1.it" data-toggle="tooltip"
-                                    title="daniela.zampetti@fondazione.uniroma1.it">
-                                    <i class="far fa-envelope fa-lg"></i>
-                                </a>
-                            </li>
+                            <li><span style="font-size:16px; margin-right: 3px;">Isabelle Sid&eacute;ra</span></li>{{-- <br> --}}
+                            <li><span style="font-size:16px; margin-right: 3px;">Daniela Zampetti</span></li>
                         </ul>
                     </div>
                     <div class="col-md-4"></div>
@@ -278,10 +253,7 @@
                             </li>
                             <li><span style="font-size:16px;">Mathilda Arnay de La Rosa</span></li>
                             <li><span style="font-size:16px;">Barbara Barich</span></li>
-                            <li><span style="font-size:16px; margin-right: 3px;">Larbi Boudad</span>
-                                <a href="mailto:larbi.boudad@fsr.um5.ac.ma" data-toggle="tooltip"
-                                    title="larbi.boudad@fsr.um5.ac.ma"><i class="far fa-envelope fa-lg"></i></a>
-                            </li>
+                            <li><span style="font-size:16px;">Larbi Boudad</span></li>
                             <li><span style="font-size:16px;">Rachid Hamdidouche</span></li>
                             <li><span style="font-size:16px;">Estelle Herrscher</span></li>
                             <li><span style="font-size:16px;">Mohamed Raouf Karray</span></li>
