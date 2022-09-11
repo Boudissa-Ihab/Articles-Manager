@@ -2,7 +2,6 @@
     <div>
         <img src="{{ asset('img/client/oued-el-gharbi.jpg') }}" style="height: 160px; width: auto;">
     </div>
-    <!--section   -->
     <section>
         <div class="container">
             <div class="row">
@@ -18,7 +17,7 @@
                                 <div class="profile-card-stats">
                                     <ul>
                                         <li><span>{{ count($this->authorDocuments) }}</span>Articles</li>
-                                        <li><span>1567</span> Vues</li>
+                                        <li><span>1</span> Vues</li>
                                     </ul>
                                 </div>
                             </div>
@@ -27,26 +26,24 @@
                                 <p>{{ $author->biography }}</p>
                                 <div class="pc_contacts">
                                     <ul>
-                                        <li>
-                                            <span>Email :</span>
-                                            <a href="mailto:{{ $author->email ?? "" }}">
-                                            @if($author->email)
-                                                {{ $author->email }}</a>
-                                            @else
-                                                /
-                                            @endif
-                                        </li>
-                                        <li>
-                                            <span>Numéro :</span>
-                                            @if($author->phone1)
-                                                {{ $author->phone1 }}</a>
-                                            @else
-                                                /
-                                            @endif
-                                        </li>
+                                        @if($author->email)
+                                            <li>
+                                                <span>Email :</span>
+                                                <a href="mailto:{{ $author->email}}">
+                                                    {{ $author->email }}
+                                                </a>
+                                            </li>
+                                        @endif
+                                        @if($author->phone1)
+                                            <li>
+                                                <span>Numéro :</span>
+                                                {{ $author->phone1 }}
+                                            </li>
+                                        @endif
                                         @if($author->phone2)
                                             <li>
-                                                <span>Numéro 2 :</span> <a href="#">{{ $author->phone2 }}</a>
+                                                <span>Numéro 2 :</span>
+                                                {{ $author->phone2 }}
                                             </li>
                                         @endif
                                     </ul>
@@ -78,7 +75,7 @@
                                 @foreach($this->authorDocuments as $document)
                                     <div class="col-md-4">
                                         <div class="grid-post-item  bold_gpi  fl-wrap">
-                                            <div class="grid-post-media">
+                                            {{-- <div class="grid-post-media">
                                                 <a href="{{ route('documents.document-details', ['document' => $document]) }}" class="gpm_link">
                                                     <div class="bg-wrap">
                                                         <div class="bg" style="background-image: url('{{ Storage::url('documents/' .$document->photo) }}');"></div>
@@ -90,12 +87,12 @@
                                             </div>
                                             @if($document->featured)
                                                 <div class="post-category-marker purp-bg" style="z-index: 1;">Populaire</div>
-                                            @endif
+                                            @endif --}}
                                             <div class="grid-post-content">
                                                 <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
-                                                <p>
+                                                {{-- <p>
                                                     {{ Str::limit($document->description, 100) ?? "" }}
-                                                </p>
+                                                </p> --}}
                                             </div>
                                             <div class="grid-post-footer">
                                                 <div class="author-link">
@@ -115,7 +112,6 @@
                                 @endforeach
                             </div>
                         </div>
-                        <!--grid-post-wrap end-->
                         <div class="clearfix"></div>
                         <!--pagination-->
                         <div class="pagination">
