@@ -17,7 +17,7 @@
                                 <div class="abs_bg"></div>
                                 <div class="profile-card-stats">
                                     <ul>
-                                        <li><span>{{ count($this->authorDocuments) }}</span>Article(s)</li>
+                                        <li><span>{{ count($this->authorDocuments) }}</span>Articles</li>
                                         <li><span>1567</span> Vues</li>
                                     </ul>
                                 </div>

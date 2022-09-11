@@ -25,6 +25,7 @@ use App\Http\Livewire\Admin\Profile;
 use App\Http\Livewire\Admin\Settings;
 use App\Http\Livewire\Admin\Slider;
 use App\Http\Livewire\Admin\TermsConditions;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -86,8 +87,10 @@ Route::middleware(['auth:admin'])->name('admin.')->group(function () {
     Route::get('/slider', Slider::class)->name('slider');
     Route::get('/contacts', ContactUs::class)->name('contacts');
 
-    Route::get('logout',function(){
+    Route::get('logout',function(Request $request){
         Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
         return redirect()->route('admin.login');
     })->name('logout');
 });
