@@ -121,14 +121,11 @@
                     <nav>
                         <ul>
                             <li>
-                                <a href="{{ route('home') }}">Accueil{{-- <i class="fas fa-caret-down"></i> --}}</a>
-                                {{-- <ul>
-                                    <li><a href="{{ route('editor', ['editor' => "organization"]) }}">Organisation</a></li>
-                                </ul> --}}
+                                <a href="{{ route('home') }}">Accueil</a>
                             </li>
-                            {{-- <li>
-                                <a href="{{ route('domains') }}" class="{{ Request::is('domains/*') || Request::is('domains') ? 'act-link' : '' }}">Domaines</a>
-                            </li> --}}
+                            <li>
+                                <a href="{{ route('journal') }}" class="{{ Request::is('the-journal') ? 'act-link' : '' }}">La Revue</a>
+                            </li>
                             <li>
                                 <a href="{{ route('documents') }}" class="{{ Request::is('documents/*') || Request::is('documents') ? 'act-link' : '' }}">Articles</a>
                             </li>

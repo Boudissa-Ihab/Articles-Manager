@@ -28,7 +28,7 @@
                         @foreach($this->domainDocuments as $document)
                             <div class="gallery-item">
                                 <div class="grid-post-item bold_gpi fl-wrap">
-                                    <div class="grid-post-media">
+                                    {{-- <div class="grid-post-media">
                                         <a href="{{ route('documents.document-details', ['document' => $document]) }}" class="gpm_link">
                                             <div class="bg-wrap">
                                                 <div class="bg" style="background-image: url('{{ Storage::url('documents/' .$document->photo) }}');"></div>
@@ -40,10 +40,10 @@
                                     </div>
                                     @if($document->featured)
                                         <div class="post-category-marker purp-bg" style="z-index: 1;">Populaire</div>
-                                    @endif
+                                    @endif --}}
                                     <div class="grid-post-content">
                                         <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
-                                        <p>{{ Str::limit($document->description, 100) }}</p>
+                                        {{-- <p>{{ Str::limit($document->description, 100) }}</p> --}}
                                     </div>
                                     <div class="grid-post-footer">
                                         <div class="author-link">
@@ -58,19 +58,6 @@
                                             @endforeach
                                         </div>
                                     </div>
-
-                                    {{-- <span>
-                                        @foreach ($document->authors as $author)
-                                            <a href="{{ route('authors.author', ['author', $author]) }}">
-                                                @if ($loop->last)
-                                                    {{ $author->name }}
-                                                @else
-                                                    {{ $author->name }} -
-                                                @endif
-                                            </a>
-                                        @endforeach
-                                    </span> --}}
-
                                 </div>
                             </div>
                         @endforeach

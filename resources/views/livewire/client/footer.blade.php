@@ -52,6 +52,25 @@
                                 <div class="footer-list footer-box fl-wrap">
                                     <ul>
                                         <li> <a href="{{ route('home') }}">Accueil</a></li>
+                                        <li> <a href="{{ route('documents') }}">Articles</a></li>
+                                        <li> <a href="{{ route('authors') }}">Auteurs</a></li>
+                                        <li> <a href="{{ route('meetings') }}">Colloques</a></li>
+                                        <li> <a href="{{ route('domains') }}">Domaines</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer-widget  end-->
+                    <!-- footer-widget -->
+                    <div class="col-md-2">
+                        <div class="footer-widget">
+                            <div class="footer-widget-title">Infos du site</div>
+                            <div class="footer-widget-content">
+                                <div class="footer-list footer-box fl-wrap">
+                                    <ul>
+                                        <li> <a href="{{ route('journal') }}">La Revue</a></li>
+                                        <li> <a href="{{ route('editor', ['editor' => "organization"]) }}">Association</a></li>
                                         <li> <a href="{{ route('about-us') }}">À propos</a></li>
                                         <li> <a href="{{ route('contact-us') }}">Contactez-nous</a></li>
                                         <li> <a href="{{ route('editor', ['editor' => "terms-and-conditions"]) }}">Termes et conditions</a></li>
@@ -60,23 +79,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- footer-widget  end-->
-                    <!-- footer-widget -->
-                    <div class="col-md-4">
-                        {{-- <div class="footer-widget">
-                            <div class="footer-widget-title">Subscribe</div>
-                            <div class="footer-widget-content">
-                                <div class="subcribe-form fl-wrap">
-                                    <p>Want to be notified when we launch a new template or an udpate. Just sign up and we'll send you a notification by email.</p>
-                                    <form id="subscribe" class="fl-wrap">
-                                        <input class="enteremail" name="email" id="subscribe-email" placeholder="Your Email" spellcheck="false" type="text">
-                                        <button type="submit" id="subscribe-button" class="subscribe-button color-bg">Send </button>
-                                        <label for="subscribe-email" class="subscribe-message"></label>
-                                    </form>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                     <!-- footer-widget  end-->
                 </div>

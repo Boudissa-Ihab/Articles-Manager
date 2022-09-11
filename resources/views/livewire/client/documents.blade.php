@@ -1,44 +1,7 @@
 <div>
-    {{-- <section class="hero-section">
-        <div class="bg-wrap hero-section_bg">
-            <div class="bg" style="background: rgba(42,104,146,1);"></div>
-        </div>
-        <div class="container">
-            <div class="hero-section_title">
-                <h2>Documents</h2>
-            </div>
-            <div class="clearfix"></div>
-            <div class="breadcrumbs-list fl-wrap">
-                <a href="{{ route('home') }}">Accueil</a>
-                <span>Documents</span>
-            </div>
-            <div class="scroll-down-wrap scw_transparent">
-                <div class="mousey">
-                    <div class="scroller"></div>
-                </div>
-                <span>Faire défiler vers le bas</span>
-            </div>
-        </div>
-    </section> --}}
-    {{-- <div class="breadcrumbs-header fl-wrap">
-        <div class="container">
-            <div class="breadcrumbs-header_url">
-                <a href="{{ route('home') }}">Accueil</a>
-                <span>Documents</span>
-            </div>
-            <div class="scroll-down-wrap">
-                <div class="mousey">
-                    <div class="scroller"></div>
-                </div>
-                <span>Faire défiler vers le bas</span>
-            </div>
-        </div>
-        <div class="pwh_bg"></div>
-    </div> --}}
     <div>
         <img src="{{ asset('img/client/cave-background.jpg') }}" style="height: 160px; width: auto;">
     </div>
-    <!--section -->
     <section>
         <div class="container">
             <div class="main-container fl-wrap">
@@ -64,7 +27,7 @@
                         @foreach($this->documents as $document)
                             <div class="gallery-item">
                                 <div class="grid-post-item bold_gpi fl-wrap">
-                                    <div class="grid-post-media">
+                                    {{-- <div class="grid-post-media">
                                         <a href="{{ route('documents.document-details', ['document' => $document]) }}" class="gpm_link">
                                             <div class="bg-wrap">
                                                 <div class="bg" style="background-image: url('{{ Storage::url('documents/' .$document->photo) }}');"></div>
@@ -76,7 +39,7 @@
                                     </div>
                                     @if($document->featured)
                                         <div class="post-category-marker purp-bg" style="z-index: 1;">Populaire</div>
-                                    @endif
+                                    @endif --}}
                                     <div class="grid-post-content">
                                         <h3><a href="{{ route('documents.document-details', ['document' => $document]) }}">{{ $document->title }}</a></h3>
                                         {{-- <p>{{ Str::limit($document->description, 100) }}</p> --}}
@@ -109,7 +72,6 @@
             </div>
         </div>
     </section>
-    <!-- section end -->
 
     <!-- AD  -->
     {{-- <div class="gray-bg ad-wrap fl-wrap">

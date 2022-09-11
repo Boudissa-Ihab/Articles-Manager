@@ -2,19 +2,16 @@
     <div>
         <img src="{{ asset('img/client/sahara-background.jpg') }}" style="height: 160px; width: auto;">
     </div>
-    <!--section   -->
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="pr-subtitle prs_big">Détails</div>
-                    <!--card-item -->
                     <ul class="contacts-list fl-wrap">
-                        <li><span><i class="fas fa-map-marker"></i> Adresse :</span> <a href="">USA 27TH Brooklyn NY</a></li>
-                        <li><span><i class="fas fa-phone"></i> Numéro de téléphone :</span> <a href="">+7(123)987654</a></li>
-                        <li><span><i class="fas fa-envelope"></i> Email :</span> <a href="">@setting('email')</a></li>
+                        <li><span><i class="fas fa-map-marker"></i> Adresse :</span> <a href=""></a></li>
+                        <li><span><i class="fas fa-phone"></i> Numéro de téléphone :</span> <a href=""></a></li>
+                        <li><span><i class="fas fa-envelope"></i> Email :</span> <a href="mailto:@setting('email')">@setting('email')</a></li>
                     </ul>
-                    <!--card-item end -->
                     <div class="contact-social fl-wrap">
                         <span class="cs-title">Nous suivre sur : </span>
                         <ul>
