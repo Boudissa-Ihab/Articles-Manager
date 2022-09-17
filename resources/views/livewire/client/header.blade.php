@@ -38,10 +38,10 @@
         <div class="header-inner fl-wrap">
             <div class="container">
                 <!-- logo holder  -->
-                <a href="{{ route('home') }}" class="logo-holder"><img src="{{ asset('img/brand/logo.png') }}" alt="Logo PECAN"></a>
-                <a href="{{ route('home') }}" class="logo-text-holder"><img src="{{ asset('img/brand/logo-text.png') }}" alt="Logo PECAN"></a>
+                <a href="{{ route('home') }}" class="logo-holder"><img src="{{ asset('img/brand/logo-white.png') }}" alt="Logo PECAN"></a>
+                <a href="{{ route('home') }}" class="logo-text-holder"><img src="{{ asset('img/brand/logo-text-white.png') }}" alt="Logo PECAN"></a>
                 <!-- logo holder end -->
-                <div class="search_btn htact show_search-btn"><i class="fas fa-search"></i> <span class="header-tooltip">Rechercher</span></div>
+                {{-- <div class="search_btn htact show_search-btn"><i class="fas fa-search"></i> <span class="header-tooltip">Rechercher</span></div> --}}
 
 
                 {{-- <div class="srf_btn htact show-reg-form"><i class="fas fa-user"></i> <span class="header-tooltip">Se connecter</span></div> --}}
@@ -100,19 +100,13 @@
 
 
 
-
-
                 <!-- Mobile view -->
-                {{-- <div class="nav-button-wrap">
+                <div class="nav-button-wrap">
                     <div class="nav-button">
-                        <div class="srf_btn htact show-reg-form"><i class="fas fa-microscope"></i> <span class="header-tooltip">Domaines</span></div>
-                        <div class="srf_btn htact show-reg-form"><i class="fas fa-file"></i> <span class="header-tooltip">Articles</span></div>
-                        <div class="srf_btn htact show-reg-form"><i class="fas fa-user-tie"></i> <span class="header-tooltip">Auteurs</span></div>
+                        <span></span><span></span><span></span>
                     </div>
-                </div> --}}
+                </div>
                 <!-- Mobile view end-->
-
-
 
 
 
@@ -133,11 +127,11 @@
                                 <a href="{{ route('authors') }}" class="{{ Request::is('authors/*') || Request::is('authors') ? 'act-link' : '' }}">Auteurs</a>
                             </li>
                             <li>
-                                <a href="{{ route('editor', ['editor' => "association"]) }}">Association</a>
+                                <a href="{{ route('editor', ['editor' => "association"]) }}" class="{{ Request::is('infos/association') ? 'act-link' : '' }}">Association</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" class="{{ Request::is('meetings') || Request::is('meetings/*') || Request::is('about-us') || Request::is('contact-us') || Route::is('terms-and-conditions')
-                                    || Route::is('privacy-policy') || Request::is('domains') || Request::is('domains/*') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
+                                <a href="javascript:void(0)" class="{{ Request::is('meetings') || Request::is('meetings/*') || Request::is('about-us') || Request::is('contact-us') || Route::is('infos/terms-and-conditions')
+                                    || Route::is('infos/privacy-policy') || Request::is('domains') || Request::is('domains/*') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
                                 <ul>
                                     <li><a href="{{ route('domains') }}">Domaines</a></li>
                                     <li><a href="{{ route('meetings') }}">Colloques</a></li>
