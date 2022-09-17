@@ -79,7 +79,7 @@ blockquote:before {
 	position: relative;
 }
 .container{
-	max-width: 1300px;
+	max-width: 1400px;
 	width:92%;
 	margin:0 auto;
 	position: relative;
@@ -289,9 +289,8 @@ blockquote:before {
 	margin-right: 14px;
 }
 .header-inner {
-    background: #fff;
+    background: rgba(42,104,146,1);;
     height: 140px;
-    border-bottom: 1px solid #eee;
 	box-shadow: 0 15px 30px 0 #0000000f;
 }
 .logo-holder {
@@ -373,10 +372,11 @@ blockquote:before {
         position:relative;
         z-index:21;
         top: 45px;
+        left: -50px;
     }
     .logo-text-holder img {
-        width: 360px;
-        height: 42px;
+        width: 350px;
+        height: 39px;
     }
 }
 .show-cart , .srf_btn , .search_btn {
@@ -719,6 +719,7 @@ blockquote:before {
 	top:17px;
 	visibility:visible;
 	z-index:20;
+    right: -40px;
 }
 .nav-holder nav {
 	position:relative;
@@ -769,7 +770,7 @@ blockquote:before {
 .nav-holder nav li a {
 	float: left;
 	padding: 5px 10px;
-    color: #222;
+    color: #fff;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -778,7 +779,7 @@ blockquote:before {
 	position:relative;
 }
 .nav-holder nav li a.act-link , .nav-holder nav li a:hover   {
-	color: #999;
+	color: #f75c41;
 }
 .nav-holder nav li a i {
 	padding-left:10px;
@@ -1162,7 +1163,7 @@ section {
 }
 .section-title h2 {
 	text-align: left;
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 700;
     color: #292929;
 }
@@ -1715,7 +1716,7 @@ section {
 /*------ footer-------------------------------------------------*/
 .main-footer {
 	background: rgba(42,104,146,1);
-	padding: 80px 0 0;
+	padding: 30px 0 0;
 }
 .footer-widget-title {
     text-align: left;
@@ -1731,7 +1732,7 @@ section {
 }
 .footer-bottom {
 	padding: 18px 0;
-	margin-top: 70px;
+	margin-top: 15px;
     background: #191919;
 }
 .footer-logo {
@@ -5201,13 +5202,11 @@ h4.cart-title span {
 }
 .nav-button-wrap {
 	float:right;
-	height:70px;
-	width:70px;
+	height:50px;
+	width:50px;
 	cursor:pointer;
 	position:relative;
 	display: block;
-	border-left:1px solid #eee;
-	left:24px;
 }
 .nav-button  {
 	position:absolute;
@@ -5491,12 +5490,6 @@ h4.cart-title span {
 .header-cart_wrap {
     right: 0;
 	width: 300px;
-}
-.main-footer {
-    padding: 60px 0 0;
-}
-.footer-bottom {
-    margin-top: 30px;
 }
 .subfooter-nav li {
     float: left;

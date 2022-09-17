@@ -8,8 +8,8 @@
                     <div class="col-md-4">
                         <div class="footer-widget">
                             <div class="footer-widget-content">
-                                <a href="{{ route('home') }}" class="footer-logo"><img src="{{ asset('img/brand/logo-white.png') }}" alt=""></a>
-                                <p>@setting('description')</p>
+                                {{-- <a href="{{ route('home') }}" class="footer-logo"><img src="{{ asset('img/brand/logo-white.png') }}" alt=""></a> --}}
+                                {{-- <p>@setting('description')</p> --}}
                                 <div class="footer-social fl-wrap">
                                     <ul>
                                         <li><a href="@setting('facebook_link')" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -94,8 +94,9 @@
                 <div class="to-top"> <i class="fas fa-caret-up"></i></div>
                 <div class="subfooter-nav">
                     <ul>
-                        <li><a href="{{ route('editor', ['editor' => "terms-and-conditions"]) }}">Termes et conditions</a></li>
-                        <li><a href="{{ route('editor', ['editor' => "privacy-policy"]) }}">Politique de confidentialité</a></li>
+                        {{-- <li><a href="{{ route('editor', ['editor' => "terms-and-conditions"]) }}">Termes et conditions</a></li>
+                        <li><a href="{{ route('editor', ['editor' => "privacy-policy"]) }}">Politique de confidentialité</a></li> --}}
+                        <li><a href="javascript:void(0)">Editeur &quot;Starbook agency&quot;</a></li>
                     </ul>
                 </div>
             </div>
