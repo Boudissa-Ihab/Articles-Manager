@@ -8,7 +8,7 @@
             <div class="main-container fl-wrap">
                 <div class="section-title">
                     <h2>Articles scientifiques</h2>
-                    <h4>Cliquez sur un article pour plus de détails</h4>
+                    <h4>Cliquez sur le titre pour afficher l'article</h4>
                     <div class="steader_opt steader_opt_abs" wire:ignore>
                         <select wire:model="filter" id="list" class="style-select no-search-select">
                             <option value="">Sélectionner un filtre :</option>

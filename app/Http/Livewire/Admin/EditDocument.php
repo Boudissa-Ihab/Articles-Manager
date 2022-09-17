@@ -82,7 +82,7 @@ class EditDocument extends Component
         'path.file' => "Veuillez ajouter un document valide",
         'path.max' => "La taille du fichier ne doit pas dépasser 200 Mo",
         'photo.image' => "Le fichier à télécharger doit être une image valide",
-        'photos.mimes' => "L'extension de l'image doit être l'une des suivantes: .jpeg,.png,.jpg,.svg,.webp,.bmp",
+        'photo.mimes' => "L'extension de l'image doit être l'une des suivantes: .jpeg,.png,.jpg,.svg,.webp,.bmp",
         'photo.max' => "La taille du fichier ne doit pas dépasser 2 Mo",
         'selectDomains.required' => "Veuillez ajouter au moins un domaine",
         'selectDomains.exists' => "Veuillez ajouter un domaine valide",

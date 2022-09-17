@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire\Admin;
 
-use App\Models\Document;
 use App\Models\Slider as SliderModel;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
@@ -13,10 +12,6 @@ use Throwable;
 class Slider extends Component
 {
     use WithFileUploads;
-
-    /* public $document;
-    public $selectDocuments = [];
-    public $unselectDocuments = []; */
 
     public $slide;
     public $photos = [];
@@ -44,35 +39,6 @@ class Slider extends Component
     {
         return SliderModel::get();
     }
-
-    /* public function getDocumentsProperty()
-    {
-        return Document::get();
-    }
-
-    public function updatedDocument($value)
-    {
-        if (in_array($value, $this->unselectDocuments))
-            unset($this->unselectDocuments[$value]);
-
-        if (($value) && !(in_array($value, $this->selectDocuments)))
-        {
-            $this->selectDocuments[$value] = $value;
-            $this->documents = $this->documents->except($this->document);
-        }
-    }
-
-    public function unsetDocument($id)
-    {
-        if(in_array($id, $this->selectDocuments))
-        {
-            unset($this->selectDocuments[$id]);
-            $this->documents[] = Document::find($id);
-        }
-
-        if (!(in_array($id, $this->unselectDocuments)))
-            $this->unselectDocuments[$id] = $id;
-    } */
 
     public function setSlide($value)
     {
