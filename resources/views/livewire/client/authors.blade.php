@@ -49,14 +49,7 @@
                             </div>
                         @else
 
-
-
                             <img src="{{ asset('img/client/loading2.gif') }}" alt="">
-
-                        {{-- ADD DIV WHEN THERE ARE NO AUTHORS --}}
-
-
-
 
                         @endif
 
@@ -65,7 +58,6 @@
                 <div class="col-md-4">
                     <!-- sidebar   -->
                     <div class="sidebar-content fl-wrap fixed-bar">
-                        <!-- box-widget -->
                         <div class="box-widget fl-wrap">
                             <div class="box-widget-content">
                                 <div class="search-widget fl-wrap">
@@ -76,25 +68,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- box-widget  end -->
 
 
                         @livewire('client.components.domains-list')
-
-
-                        {{-- @if(count($this->domains))
-                            <div class="box-widget fl-wrap">
-                                <div class="widget-title">Domaines de recherche</div>
-                                <div class="box-widget-content">
-                                    <div class="tags-widget">
-                                        @foreach($this->domains as $domain)
-                                            <a href="#">{{ $domain->name }}</a>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        @endif --}}
-
 
                         <!-- box-widget -->
                         <div class="box-widget fl-wrap">

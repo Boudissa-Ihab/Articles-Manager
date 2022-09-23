@@ -22,6 +22,11 @@
                     </div>
                 </div>
 
+                <img src="{{ asset('img/brand/review-front-cover.jpg') }}" alt="Couverture avant"
+                    style="height: 270px; width: auto; margin: 10px;">
+                <img src="{{ asset('img/brand/review-back-cover.jpg') }}" alt="Couverture arrière"
+                    style="height: 270px; width: auto; margin: 10px;">
+
                 @if(count($this->documents))
                     <div class="grid-post-wrap gallery-items">
                         @foreach($this->documents as $document)

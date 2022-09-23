@@ -2388,9 +2388,9 @@ section {
 }
 .list-post-media {
 	position: relative;
-	width:30%;
+	width:170px;
 	overflow: hidden;
-	height: 220px;
+	height: 170px;
 	float: left;
 	border-radius: 4px;
 }
@@ -3346,7 +3346,7 @@ section {
 	border-radius: 2px;
 	margin: 0 5px 5px 0;
 	font-weight: 600;
-	background: #222;
+	background: rgba(42,104,146,1);
 }
 .slider_widget_title {
 	position: absolute;
@@ -3846,7 +3846,7 @@ section {
 }
 .profile-card_media img {
 	width: 90px;
-	height: 90px;
+	height: 100px;
 	position: relative;
 	z-index: 2;
 	border-radius:4px;
@@ -3866,7 +3866,6 @@ section {
 	font-size: 16px;
 	text-align: left;
 	color: #fff;
-	padding-bottom: 4px;
 }
 .profile-card_media_content h5 {
 	font-size: 10px;

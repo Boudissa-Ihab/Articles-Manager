@@ -54,8 +54,12 @@
                                 <div class="single-slider fl-wrap">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper lightgallery" style="justify-content: center;">
-                                            <img src="{{ asset('storage/documents/' .$document->photo) }}"
-                                                alt="{{ $document->title }}" style="width: 50% !important; height: auto;">
+                                            {{-- <img src="{{ asset('storage/documents/' .$document->photo) }}"
+                                                alt="{{ $document->title }}" style="width: 50% !important; height: auto;"> --}}
+                                            <img src="{{ asset('img/brand/review-front-cover.jpg') }}" alt="Couverture avant"
+                                                style="height: 270px; width: auto; margin: 10px;">
+                                            <img src="{{ asset('img/brand/review-back-cover.jpg') }}" alt="Couverture arrière"
+                                                style="height: 270px; width: auto; margin: 10px;">
                                         </div>
                                     </div>
                                 </div>
@@ -125,10 +129,9 @@
                                 </div>
                             </div>
 
-
                             <div class="single-post-footer fl-wrap">
                                 <div class="post-single-tags">
-                                    <span class="tags-title"><i class="fas fa-sitemap"></i> Domaines : </span>
+                                    <span class="tags-title"><i class="fas fa-sitemap"></i> Mots-clés : </span>
                                     <div class="tags-widget">
                                         @foreach($document->domains as $domain)
                                             <a href="#">{{ $domain->name }}</a>
