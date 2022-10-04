@@ -40,7 +40,9 @@
                                 <div class="col-md-5">
                                     <div class="qty_btn">
                                         @if($document->is_free)
-                                            <button class="btn" wire:click.prevent="download({{$document}})"><span>Télécharger</span> <i class="fas fa-caret-right"></i> </button>
+                                            <button class="btn" {{-- wire:click.prevent="download({{$document}})" --}}
+                                            onclick="LoadPdfFromUrl('{{ asset('storage/documents/' .$document->path) }}')"><span>Ouvrir</span> <i class="fas fa-caret-right"></i> </button>
+                                            <button class="btn" wire:click.prevent="download({{$document}})"><span>Télécharger</span> </button>
                                         @else
                                             <button class="btn"><span>Ajouter au panier</span> <i class="fas fa-caret-right"></i> </button>
                                         @endif
@@ -48,24 +50,23 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- single-post-media   -->
                         <div class="single-post-media fl-wrap">
                             <div class="single-slider-wrap fl-wrap">
                                 <div class="single-slider fl-wrap">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper lightgallery" style="justify-content: center;">
-                                            {{-- <img src="{{ asset('storage/documents/' .$document->photo) }}"
-                                                alt="{{ $document->title }}" style="width: 50% !important; height: auto;"> --}}
                                             <img src="{{ asset('img/brand/review-front-cover.jpg') }}" alt="Couverture avant"
-                                                style="height: 270px; width: auto; margin: 10px;">
+                                                style="height: 260px; width: auto; margin: 10px 2px 10px 0;">
                                             <img src="{{ asset('img/brand/review-back-cover.jpg') }}" alt="Couverture arrière"
-                                                style="height: 270px; width: auto; margin: 10px;">
+                                                style="height: 260px; width: auto; margin: 10px 0 10px 2px;">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- single-post-media end   -->
+
+                        <div id="pdf_container"></div>
+
                         <!-- single-post-content   -->
                         <div class="single-post-content spc_column shop_post-content fl-wrap">
                             <div class="clearfix"></div>
@@ -192,8 +193,6 @@
                 <!-- sidebar   -->
                 <div class="col-md-4">
                     <div class="sidebar-content fl-wrap fixed-bar">
-
-
                         {{-- <div class="box-widget fl-wrap">
                             <div class="box-widget-content">
                                 <div class="search-widget fl-wrap">
@@ -292,4 +291,62 @@
         </div>
     </div> --}}
     <!-- section end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js" integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js" integrity="sha512-lHibs5XrZL9hXP3Dhr/d2xJgPy91f2mhVAasrSbMkbmoTSm2Kz8DuSWszBLUg31v+BM6tSiHSqT72xwjaNvl0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        var pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+        var pdfDoc = null;
+        var scale = 1; //Set Scale for Zoom.
+        var resolution = IsMobile() ? 1.5 : 1; //Set Resolution as per Desktop and Mobile.
+        function LoadPdfFromUrl(url) {
+            //Read PDF from URL.
+            pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
+                pdfDoc = pdfDoc_;
+
+                //Reference the Container DIV.
+                var pdf_container = document.getElementById("pdf_container");
+                pdf_container.style.display = "block";
+                pdf_container.style.height = IsMobile() ? "1200px" : "820px";
+
+                //Loop and render all pages.
+                for (var i = 1; i <= pdfDoc.numPages; i++) {
+                    RenderPage(pdf_container, i);
+                }
+            });
+        };
+        function RenderPage(pdf_container, num) {
+            pdfDoc.getPage(num).then(function (page) {
+                //Create Canvas element and append to the Container DIV.
+                var canvas = document.createElement('canvas');
+                canvas.id = 'pdf-' + num;
+                ctx = canvas.getContext('2d');
+                pdf_container.appendChild(canvas);
+
+                //Create and add empty DIV to add SPACE between pages.
+                var spacer = document.createElement("div");
+                spacer.style.height = "20px";
+                pdf_container.appendChild(spacer);
+
+                //Set the Canvas dimensions using ViewPort and Scale.
+                var viewport = page.getViewport({ scale: scale });
+                canvas.height = resolution * viewport.height;
+                canvas.width = resolution * viewport.width;
+
+                //Render the PDF page.
+                var renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport,
+                    transform: [resolution, 0, 0, resolution, 0, 0]
+                };
+
+                page.render(renderContext);
+            });
+        };
+
+        function IsMobile() {
+            var r = new RegExp("Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini");
+            return r.test(navigator.userAgent);
+        }
+    </script>
 </div>
