@@ -7,6 +7,7 @@ use Throwable;
 
 class HomeInfo extends Component
 {
+    protected $listeners = ['setContent'];
     public $association;
     public $organization;
 
@@ -14,6 +15,13 @@ class HomeInfo extends Component
     {
         $this->association = setting('association') ?? "";
         $this->organization = setting('organization') ?? "";
+    }
+
+    public function setContent($association, $organization)
+    {
+        $this->association = $association;
+        $this->organization = $organization;
+        $this->save();
     }
 
     public function save()

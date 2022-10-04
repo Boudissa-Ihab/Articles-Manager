@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
+                        {{-- <div class="card-body">
                             <div class="form-group" wire:ignore>
                                 <textarea
                                     wire:model.defer="association"
@@ -49,6 +49,18 @@
                                     });
                                 </script>
                             </div>
+                        </div> --}}
+                        <div class="card-body">
+                            <div class="form-group" wire:ignore>
+                                <div class="document-editor__association"></div>
+                                <div
+                                    class="form-control"
+                                    name="association"
+                                    id="association"
+                                    style="height: 600px;">
+                                    @setting('association')
+                                </div>
+                            </div>
                         </div>
 
                         <div class="card-header border-0">
@@ -58,7 +70,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
+                        {{-- <div class="card-body">
                             <div class="form-group" wire:ignore>
                                 <textarea
                                     wire:model.defer="organization"
@@ -81,6 +93,19 @@
                                 </script>
                             </div>
                             <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        </div> --}}
+                        <div class="card-body">
+                            <div class="form-group" wire:ignore>
+                                <div class="document-editor__organization"></div>
+                                <div
+                                    class="form-control"
+                                    name="organization"
+                                    id="organization"
+                                    style="height: 600px;">
+                                    @setting('organization')
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="setContent()">Enregistrer</button>
                         </div>
                     </form>
                 </div>
@@ -89,7 +114,7 @@
     </div>
 
     <!-- CKeditor scripts -->
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         CKEDITOR.replace('association', {
             toolbar : [
                 { name: 'clipboard', items: [  'Undo', 'Redo' ,'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-']},
@@ -125,5 +150,45 @@
             filebrowserUploadMethod: 'form',
             height: 630
         });
+    </script> --}}
+
+    <script>
+        DecoupledDocumentEditor
+            .create( document.querySelector('#association'), {
+                licenseKey: '',
+            })
+            .then( editor => {
+                if(false){
+                    editor.isReadOnly = true;
+                    editor.ui.view.toolbar.element.style.display = 'none';
+                }
+
+                // Set a custom container for the toolbar.
+                document.querySelector( '.document-editor__association' ).appendChild( editor.ui.view.toolbar.element );
+                document.querySelector( '.ck-toolbar' ).classList.add( 'ck-reset_all' );
+            })
+            .catch(error => {
+                console.error( error );
+            });
+
+        DecoupledDocumentEditor
+            .create( document.querySelector('#organization'), {
+                licenseKey: '',
+            })
+            .then( editor => {
+                if(false){
+                    editor.isReadOnly = true;
+                    editor.ui.view.toolbar.element.style.display = 'none';
+                }
+
+                // Set a custom container for the toolbar.
+                document.querySelector( '.document-editor__organization' ).appendChild( editor.ui.view.toolbar.element );
+                document.querySelector( '.ck-toolbar' ).classList.add( 'ck-reset_all' );
+
+                setContent = () => Livewire.emit('setContent', $('#association').html(), $('#organization').html())
+            })
+            .catch(error => {
+                console.error( error );
+            });
     </script>
 </div>

@@ -133,8 +133,8 @@
                                 <a href="javascript:void(0)" class="{{ Request::is('meetings') || Request::is('meetings/*') || Request::is('about-us') || Request::is('contact-us') || Route::is('infos/terms-and-conditions')
                                     || Route::is('infos/privacy-policy') || Request::is('domains') || Request::is('domains/*') ? 'act-link' : '' }}">Divers<i class="fas fa-caret-down"></i></a>
                                 <ul>
+                                    <li><a href="{{ route('meetings') }}">Manifestations scientifiques</a></li>
                                     <li><a href="{{ route('domains') }}">Domaines</a></li>
-                                    <li><a href="{{ route('meetings') }}">Colloques</a></li>
                                     <li><a href="{{ route('about-us') }}">À propos</a></li>
                                     <li><a href="{{ route('contact-us') }}">Contactez-nous</a></li>
                                     <li><a href="{{ route('editor', ['editor' => "terms-and-conditions"]) }}">Termes et conditions</a></li>

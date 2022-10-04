@@ -738,7 +738,7 @@ blockquote:before {
 	position: absolute;
 	min-width:220px;
 	top: 53px;
-	left: 0;
+	left: -100px;
 	z-index: 1;
 	padding:10px 0;
 	background:#292929;
@@ -5220,7 +5220,7 @@ h4.cart-title span {
 	float:left;
 	width:100%;
 	height:2px;
-	background:#000;
+	background:#fff;
 	margin-bottom:4px;
 	border-radius:4px;
 	-webkit-transition: all 200ms linear;
@@ -5470,7 +5470,7 @@ h4.cart-title span {
 	float:left;
 	width:100%;
 	height:2px;
-	background:#000;
+	background:#fff;
 	margin-bottom:4px;
 	border-radius:4px;
 	-webkit-transition: all 200ms linear;
@@ -5776,4 +5776,12 @@ button.close
 
 .ck-content strong {
     font-weight: 700;
+}
+
+#pdf_container {
+    background: #ccc;
+    text-align: center;
+    display: none;
+    padding: 5px;
+    overflow: auto
 }
